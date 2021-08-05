@@ -1,0 +1,28 @@
+<?php include('common/header_view.php'); ?>
+
+<!-- WRAPPER -->
+<div class="wrapper">
+	<!-- HEADCONTENT -->
+	<div class="headcontent" style="background-image:url('<?=base_url_upload_images()?>/images/headcontent.jpg')">
+		<div class="container">
+			<div class="col-sm-6">
+				<h1>購物須知</h1>
+			</div>
+		</div>
+	</div>
+	<!-- /.headcontent -->
+	
+	<div class="container text-center" >
+		<?php
+			$banner_item = get_banner_item_by_code(305);
+			if($banner_item && $banner_item['content']) :	
+		?>
+			<div class="container text-center" ><?=$banner_item['content']?></div>
+		
+		<?php endif; ?>
+	</div>
+		
+</div>
+<!-- /.wrapper -->
+
+<?php include('common/footer_view.php'); ?>
