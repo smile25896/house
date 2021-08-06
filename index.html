@@ -1104,140 +1104,77 @@
               <input
                 type="checkbox"
                 index="-1"
-                listtype="priceList"
                 class="chkbox chkbox-any ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_none"
-                ga_cat="buy_search"
+                name="search-select-option-price"
+                value="unlimit"
               /><span>總價不限</span>
             </label>
-            <!-- ngRepeat: i in currPriceList --><label
-              ng-repeat="i in currPriceList"
-              class="ng-scope"
-            >
+            <label class="ng-scope">
               <input
                 type="checkbox"
                 index="0"
                 listtype="priceList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_-2000"
-                ga_cat="buy_search"
+                name="search-select-option-price"
+                value="0-2000"
               />
-              <!-- ngIf: $index == 0 --><span
-                ng-if=" $index == 0 "
-                class="ng-binding ng-scope"
-                >2000 萬以下</span
-              ><!-- end ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (currPriceList.length-1) -->
-              <!-- ngIf: $index == (currPriceList.length - 1) --> </label
-            ><!-- end ngRepeat: i in currPriceList --><label
-              ng-repeat="i in currPriceList"
-              class="ng-scope"
-            >
+              <span class="ng-binding ng-scope">2000 萬以下</span></label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="1"
                 listtype="priceList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_2000-4000"
-                ga_cat="buy_search"
+                name="search-select-option-price"
+                value="2000-4000"
               />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (currPriceList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (currPriceList.length-1) "
-                class="ng-binding ng-scope"
-                >2000 萬 - 4000 萬</span
-              ><!-- end ngIf: $index > 0 && $index < (currPriceList.length-1) -->
-              <!-- ngIf: $index == (currPriceList.length - 1) --> </label
-            ><!-- end ngRepeat: i in currPriceList --><label
-              ng-repeat="i in currPriceList"
-              class="ng-scope"
-            >
+              <span class="ng-binding ng-scope">2000 萬 - 4000 萬</span></label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="2"
                 listtype="priceList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_4000-6000"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (currPriceList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (currPriceList.length-1) "
-                class="ng-binding ng-scope"
+                name="search-select-option-price"
+                value="4000-6000"
+              /><span class="ng-binding ng-scope"
                 >4000 萬 - 6000 萬</span
-              ><!-- end ngIf: $index > 0 && $index < (currPriceList.length-1) -->
-              <!-- ngIf: $index == (currPriceList.length - 1) --> </label
-            ><!-- end ngRepeat: i in currPriceList --><label
-              ng-repeat="i in currPriceList"
-              class="ng-scope"
-            >
+              ></label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="3"
                 listtype="priceList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_6000-10000"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (currPriceList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (currPriceList.length-1) "
-                class="ng-binding ng-scope"
+                name="search-select-option-price"
+                value="6000-10000"
+              /><span class="ng-binding ng-scope"
                 >6000 萬 - 10000 萬</span
-              ><!-- end ngIf: $index > 0 && $index < (currPriceList.length-1) -->
-              <!-- ngIf: $index == (currPriceList.length - 1) --> </label
-            ><!-- end ngRepeat: i in currPriceList --><label
-              ng-repeat="i in currPriceList"
-              class="ng-scope"
-            >
+              ></label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="4"
                 listtype="priceList"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_price_click"
-                ga_label="buy_search_%%_price_10000-"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (currPriceList.length-1) -->
-              <!-- ngIf: $index == (currPriceList.length - 1) --><span
-                ng-if=" $index == (currPriceList.length - 1) "
-                class="ng-binding ng-scope"
-                >10000 萬以上</span
-              ><!-- end ngIf: $index == (currPriceList.length - 1) --> </label
-            ><!-- end ngRepeat: i in currPriceList -->
+                class="chkbox"
+                name="search-select-option-price"
+                value="10000-max"
+              /><span class="ng-binding ng-scope">10000 萬以上</span></label
+            >
             <div class="custom-block">
               <div class="input-wrap">
                 <input
                   index="0"
-                  listtype="priceList"
-                  class="custom-num num ng-isolate-scope"
+                  name="price1"
+                  class="custom-num num"
                   type="text"
                   size="5"
                 />
                 -
                 <input
                   index="1"
-                  listtype="priceList"
-                  class="custom-num num ng-isolate-scope"
+                  name="price2"
+                  class="custom-num num"
                   type="text"
                   size="5"
                 />
@@ -1476,5 +1413,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/house.js"></script>
+    <script src="./js/house-data.js"></script>
   </body>
 </html>
