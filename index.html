@@ -1209,7 +1209,6 @@
                 <input
                   class="sp-chkbox ng-pristine ng-untouched ng-valid"
                   type="radio"
-                  ng-model="searchCondition.pyeongType"
                   value="0"
                   name="pyeongType-type"
                 />
@@ -1240,142 +1239,74 @@
               ><input
                 type="checkbox"
                 index="-1"
-                listtype="pyeongList"
                 class="chkbox chkbox-any ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_none"
-                ga_cat="buy_search"
+                name="search-select-option-area"
+                value="unlimit"
               /><span>坪數不限</span></label
             >
-            <!-- ngRepeat: i in pyeongList --><label
-              ng-repeat="i in pyeongList"
-              class="ng-scope"
-            >
+            <label ng-repeat="i in pyeongList" class="ng-scope">
               <input
                 type="checkbox"
                 index="0"
-                listtype="pyeongList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_-50"
-                ga_cat="buy_search"
+                name="search-select-option-area"
+                value="0-50"
               />
-              <!-- ngIf: $index == 0 --><span
-                ng-if=" $index == 0"
-                class="ng-binding ng-scope"
+              <span ng-if=" $index == 0" class="ng-binding ng-scope"
                 >50 坪以下</span
-              ><!-- end ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (pyeongList.length-1) -->
-              <!-- ngIf: $index == (pyeongList.length - 1) --> </label
-            ><!-- end ngRepeat: i in pyeongList --><label
-              ng-repeat="i in pyeongList"
-              class="ng-scope"
-            >
+              ></label
+            ><label ng-repeat="i in pyeongList" class="ng-scope">
               <input
                 type="checkbox"
                 index="1"
-                listtype="pyeongList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_50-100"
-                ga_cat="buy_search"
+                name="search-select-option-area"
+                value="50-100"
               />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (pyeongList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (pyeongList.length-1) "
-                class="ng-binding ng-scope"
-                >50 坪 - 100 坪</span
-              ><!-- end ngIf: $index > 0 && $index < (pyeongList.length-1) -->
-              <!-- ngIf: $index == (pyeongList.length - 1) --> </label
-            ><!-- end ngRepeat: i in pyeongList --><label
-              ng-repeat="i in pyeongList"
-              class="ng-scope"
-            >
+              <span class="ng-binding ng-scope">50 坪 - 100 坪</span></label
+            ><label ng-repeat="i in pyeongList" class="ng-scope">
               <input
                 type="checkbox"
                 index="2"
-                listtype="pyeongList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_100-300"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (pyeongList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (pyeongList.length-1) "
-                class="ng-binding ng-scope"
-                >100 坪 - 300 坪</span
-              ><!-- end ngIf: $index > 0 && $index < (pyeongList.length-1) -->
-              <!-- ngIf: $index == (pyeongList.length - 1) --> </label
-            ><!-- end ngRepeat: i in pyeongList --><label
-              ng-repeat="i in pyeongList"
-              class="ng-scope"
-            >
+                name="search-select-option-area"
+                value="100-300"
+              /><span class="ng-binding ng-scope">100 坪 - 300 坪</span> </label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="3"
-                listtype="pyeongList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_300-500"
-                ga_cat="buy_search"
+                name="search-select-option-area"
+                value="300-500"
               />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (pyeongList.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (pyeongList.length-1) "
-                class="ng-binding ng-scope"
-                >300 坪 - 500 坪</span
-              ><!-- end ngIf: $index > 0 && $index < (pyeongList.length-1) -->
-              <!-- ngIf: $index == (pyeongList.length - 1) --> </label
-            ><!-- end ngRepeat: i in pyeongList --><label
-              ng-repeat="i in pyeongList"
-              class="ng-scope"
-            >
+              <span class="ng-binding ng-scope">300 坪 - 500 坪</span></label
+            ><label class="ng-scope">
               <input
                 type="checkbox"
                 index="4"
-                listtype="pyeongList"
                 class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_sqft_click"
-                ga_label="buy_search_%%_sqft_500-"
-                ga_cat="buy_search"
+                name="search-select-option-area"
+                value="500-max"
               />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (pyeongList.length-1) -->
-              <!-- ngIf: $index == (pyeongList.length - 1) --><span
-                ng-if=" $index == (pyeongList.length - 1) "
-                class="ng-binding ng-scope"
-                >500 坪以上</span
-              ><!-- end ngIf: $index == (pyeongList.length - 1) --> </label
-            ><!-- end ngRepeat: i in pyeongList -->
+              <span class="ng-binding ng-scope">500 坪以上</span></label
+            >
             <div class="custom-block">
               <div class="input-wrap">
                 <input
                   index="0"
-                  listtype="pyeongList"
                   class="custom-num num ng-isolate-scope"
                   type="text"
                   size="3"
+                  name="area1"
                 />
                 -
                 <input
                   index="1"
-                  listtype="pyeongList"
                   class="custom-num num ng-isolate-scope"
                   type="text"
                   size="3"
+                  name="area2"
                 />
                 坪
               </div>
@@ -1413,6 +1344,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/house.js"></script>
-    <script src="./js/house-data.js"></script>
+    <script src="./js/house-price.js"></script>
+    <script src="./js/house-area.js"></script>
   </body>
 </html>

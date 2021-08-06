@@ -27,6 +27,9 @@ function getPriceCheckboxes() {
 }
 
 function handleClickChangePriceCheckbox(e) {
+  document.querySelector('input[name="price1"]').value = "";
+  document.querySelector('input[name="price2"]').value = "";
+
   setPriceList(e.target);
   let priceCheckboxes = getPriceCheckboxes();
   if (e.target.value === "unlimit" && e.target.checked) {

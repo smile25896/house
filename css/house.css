@@ -73,6 +73,7 @@
 .search-select {
   padding-right: 1em;
   font-size: 14px;
+  white-space: nowrap;
 }
 .search-select:before {
   -moz-transition: all 0.5s ease;
