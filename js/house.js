@@ -14,6 +14,10 @@ $(document).ready(function () {
       event.target.parentNode.classList.add("show1");
     }
   });
+
+  document
+    .querySelector(".search-more-fliter-switcher")
+    .addEventListener("click", handleClickMoreFilter);
 });
 
 $("body").on("click", function (e) {
@@ -34,4 +38,12 @@ function handleClickTab(e) {
   });
 
   e.target.classList.add("is-active");
+}
+
+function handleClickMoreFilter(e) {
+  e.target.classList.toggle("is-active");
+
+  document
+    .querySelector(".m-search-more-filter-block")
+    .classList.toggle("is-active");
 }
