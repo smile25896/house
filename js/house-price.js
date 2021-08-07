@@ -45,7 +45,6 @@ function handleClickChangePriceCheckbox(e) {
 
 function setPriceList(target, needCheckMiddle = true) {
   let { value, checked } = target;
-  let text = "總價不限";
   if (value === "unlimit") {
     priceList.length = 0;
   } else if (checked) {
@@ -60,7 +59,6 @@ function setPriceList(target, needCheckMiddle = true) {
     if (needCheckMiddle) {
       checkedMiddlePrice(priceList[0], priceList[priceList.length - 1]);
     }
-    text = setPriceText();
   } else {
     let count = 0;
 
@@ -86,9 +84,8 @@ function setPriceList(target, needCheckMiddle = true) {
         target.checked = true;
       }
     }
-    text = setPriceText();
   }
-  document.querySelector(".search-select-price").textContent = text;
+  setPriceText();
 }
 
 function setPriceText() {
@@ -108,7 +105,8 @@ function setPriceText() {
   } else {
     text = priceList[0] + "萬-" + priceList[priceList.length - 1] + "萬";
   }
-  return text;
+  document.querySelector(".search-select-price").textContent = text;
+  // return text;
 }
 
 function checkedMiddlePrice(minPrice, maxPrice) {
@@ -157,6 +155,5 @@ function handleChangePrice(e) {
     priceList.sort(compare);
   }
 
-  let text = setPriceText();
-  document.querySelector(".search-select-price").textContent = text;
+  setPriceText();
 }

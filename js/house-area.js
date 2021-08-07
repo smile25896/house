@@ -42,7 +42,6 @@ function handleClickChangeAreaCheckbox(e) {
 
 function setAreaList(target, needCheckMiddle = true) {
   let { value, checked } = target;
-  let text = "坪數不限";
   if (value === "unlimit") {
     areaList.length = 0;
   } else if (checked) {
@@ -57,7 +56,6 @@ function setAreaList(target, needCheckMiddle = true) {
     if (needCheckMiddle) {
       checkedMiddleArea(areaList[0], areaList[areaList.length - 1]);
     }
-    text = setAreaText();
   } else {
     let count = 0;
 
@@ -83,9 +81,8 @@ function setAreaList(target, needCheckMiddle = true) {
         target.checked = true;
       }
     }
-    text = setAreaText();
   }
-  document.querySelector(".search-select-area").textContent = text;
+  setAreaText();
 }
 
 function setAreaText() {
@@ -105,7 +102,7 @@ function setAreaText() {
   } else {
     text = areaList[0] + "坪-" + areaList[areaList.length - 1] + "坪";
   }
-  return text;
+  document.querySelector(".search-select-area").textContent = text;
 }
 
 function checkedMiddleArea(minArea, maxArea) {
@@ -154,7 +151,5 @@ function handleChangeArea(e) {
     areaList.sort(compare);
   }
 
-  let text = setAreaText();
-  console.log(text);
-  document.querySelector(".search-select-area").textContent = text;
+  setAreaText();
 }
