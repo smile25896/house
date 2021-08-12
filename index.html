@@ -672,1024 +672,1327 @@
   </head>
   <body>
     <section class="l-body">
-      <div class="hng-search-bar">
-        <ul class="m-search-for-lists">
-          <li class="tab is-active" data-tab="all">全部用途</li>
-          <li class="tab" data-tab="residence">住宅</li>
-          <li class="tab" data-tab="store">店面</li>
-          <li class="tab" data-tab="office">辦公</li>
-          <li class="tab" data-tab="factory">廠房</li>
-          <li class="tab" data-tab="parking">車位</li>
-          <li class="tab" data-tab="earth">土地</li>
-          <li class="tab" data-tab="other">其他</li>
-        </ul>
-      </div>
-      <div class="m-search-field">
-        <!-- 縣市/鄉鎮市區 -->
-        <div class="m-search-select-wrap dropdown-box">
-          <a
-            href="#"
-            class="search-select search-select-city ng-binding dropdown-toggle"
-            id="dropdownMenuButton-city"
-            aria-expanded="false"
-          >
-            區域不限
-          </a>
-          <div
-            class="search-select-option-cities select-option dropdown-menu"
-            aria-labelledby="dropdownMenuButton-city"
-          >
-            <!-- <a href="" class="close">×</a> -->
-            <ul class="ul-city">
-              <!-- 縣市 -->
-              <li>
-                <span>台北市</span>
-              </li>
-              <li>
-                <span>新北市</span>
-              </li>
-              <li>
-                <span>基隆市</span>
-              </li>
-              <li>
-                <span>連江縣</span>
-              </li>
-              <li>
-                <span>宜蘭縣</span>
-              </li>
-              <li>
-                <span>新竹市</span>
-              </li>
-              <li>
-                <span>新竹縣</span>
-              </li>
-              <li>
-                <span>桃園市</span>
-              </li>
-              <li>
-                <span>苗栗縣</span>
-              </li>
-              <li>
-                <span>台中市</span>
-              </li>
-              <li>
-                <span>彰化縣</span>
-              </li>
-              <li>
-                <span>南投縣</span>
-              </li>
-              <li>
-                <span>嘉義市</span>
-              </li>
-              <li>
-                <span>嘉義縣</span>
-              </li>
-              <li>
-                <span>雲林縣</span>
-              </li>
-              <li>
-                <span>台南市</span>
-              </li>
-              <li>
-                <span>高雄市</span>
-              </li>
-              <li>
-                <span>澎湖縣</span>
-              </li>
-              <li>
-                <span>金門縣</span>
-              </li>
-              <li>
-                <span>屏東縣</span>
-              </li>
-              <li>
-                <span>台東縣</span>
-              </li>
-              <li>
-                <span>花蓮縣</span>
-              </li>
-              <li>
-                <span class="cities-all">區域不限</span>
-              </li>
-            </ul>
-            <ul class="ul-town hidden">
-              <!-- 鄉鎮區域 -->
-              <li class="reset go-back-city">
-                <span><i class="fa fa-reply"></i></span>
-              </li>
-              <!-- ngRepeat: a in areaList -->
-              <li>
-                <label>
-                  <input
-                    area="全區"
-                    index="0"
-                    type="checkbox"
-                    class="chkbox area-chkbox"
-                  />
-                  <span class="ng-binding">全區</span>
-                </label>
-              </li>
-            </ul>
-          </div>
+      <div class="searchbar">
+        <div class="hng-search-bar">
+          <ul class="m-search-for-lists">
+            <li class="tab is-active" data-tab="all">全部用途</li>
+            <li class="tab" data-tab="residence">住宅</li>
+            <li class="tab" data-tab="store">店面</li>
+            <li class="tab" data-tab="office">辦公</li>
+            <li class="tab" data-tab="factory">廠房</li>
+            <li class="tab" data-tab="parking">車位</li>
+            <li class="tab" data-tab="earth">土地</li>
+            <li class="tab" data-tab="other">其他</li>
+          </ul>
         </div>
-        <div class="m-search-select-wrap dropdown-box">
-          <a
-            href="#"
-            class="search-select search-select-price ng-binding dropdown-toggle"
-            id="dropdownMenuButton-price"
-            aria-expanded="false"
-          >
-            總價不限
-          </a>
-          <div
-            class="search-select-option-price select-option dropdown-menu"
-            aria-labelledby="dropdownMenuButton-price"
-          >
-            <label>
-              <input
-                type="checkbox"
-                index="-1"
-                class="chkbox chkbox-any ng-isolate-scope"
-                name="search-select-option-price"
-                value="unlimit"
-              /><span>總價不限</span>
-            </label>
-            <label class="ng-scope">
-              <input
-                type="checkbox"
-                index="0"
-                listtype="priceList"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-price"
-                value="0-300"
-              />
-              <span class="ng-binding ng-scope">300 萬以下</span></label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="1"
-                listtype="priceList"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-price"
-                value="300-600"
-              />
-              <span class="ng-binding ng-scope">300 萬 - 600 萬</span></label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="2"
-                listtype="priceList"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-price"
-                value="600-900"
-              /><span class="ng-binding ng-scope">600 萬 - 900 萬</span></label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="3"
-                listtype="priceList"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-price"
-                value="900-1200"
-              /><span class="ng-binding ng-scope">900 萬 - 1200 萬</span></label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="4"
-                listtype="priceList"
-                class="chkbox"
-                name="search-select-option-price"
-                value="1200-max"
-              /><span class="ng-binding ng-scope">1200 萬以上</span></label
-            >
-            <div class="custom-block">
-              <div class="input-wrap">
-                <input
-                  index="0"
-                  name="price1"
-                  class="custom-num num"
-                  type="text"
-                  size="5"
-                />
-                -
-                <input
-                  index="1"
-                  name="price2"
-                  class="custom-num num"
-                  type="text"
-                  size="5"
-                />
-                萬
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="m-search-select-wrap dropdown-box">
-          <a
-            href="#"
-            class="search-select search-select-area ng-binding dropdown-toggle"
-            id="dropdownMenuButton-area"
-            aria-expanded="false"
-          >
-            坪數不限
-          </a>
-          <div
-            class="search-select-option-area select-option dropdown-menu"
-            aria-labelledby="dropdownMenuButton-area"
-          >
-            <div
-              style="
-                height: 40px;
-                line-height: 40px;
-                padding-left: 0.7em;
-                margin-bottom: 0.2em;
-                border-bottom: 1px solid #eee;
+        <div class="m-search-field">
+          <!-- 縣市/鄉鎮市區 -->
+          <div class="m-search-select-wrap dropdown-box">
+            <a
+              href="#"
+              class="
+                search-select search-select-city
+                ng-binding
+                dropdown-toggle
               "
+              id="dropdownMenuButton-city"
+              aria-expanded="false"
             >
-              <label class="inline">
-                <input
-                  class="sp-chkbox ng-pristine ng-untouched ng-valid"
-                  type="radio"
-                  value="0"
-                  name="pyeongType-type"
-                />
-                <span>建物</span>
-              </label>
-              <label class="inline">
-                <input
-                  class="sp-chkbox ng-pristine ng-untouched ng-valid"
-                  type="radio"
-                  ng-model="searchCondition.pyeongType"
-                  value="1"
-                  name="pyeongType-type"
-                />
-                <span>土地</span>
-              </label>
-              <label class="inline">
-                <input
-                  class="sp-chkbox ng-pristine ng-untouched ng-valid"
-                  type="radio"
-                  ng-model="searchCondition.pyeongType"
-                  value="2"
-                  name="pyeongType-type"
-                />
-                <span>主+陽</span>
-              </label>
+              區域不限
+            </a>
+            <div
+              class="search-select-option-cities select-option dropdown-menu"
+              aria-labelledby="dropdownMenuButton-city"
+            >
+              <!-- <a href="" class="close">×</a> -->
+              <ul class="ul-city">
+                <!-- 縣市 -->
+                <li>
+                  <span>台北市</span>
+                </li>
+                <li>
+                  <span>新北市</span>
+                </li>
+                <li>
+                  <span>基隆市</span>
+                </li>
+                <li>
+                  <span>連江縣</span>
+                </li>
+                <li>
+                  <span>宜蘭縣</span>
+                </li>
+                <li>
+                  <span>新竹市</span>
+                </li>
+                <li>
+                  <span>新竹縣</span>
+                </li>
+                <li>
+                  <span>桃園市</span>
+                </li>
+                <li>
+                  <span>苗栗縣</span>
+                </li>
+                <li>
+                  <span>台中市</span>
+                </li>
+                <li>
+                  <span>彰化縣</span>
+                </li>
+                <li>
+                  <span>南投縣</span>
+                </li>
+                <li>
+                  <span>嘉義市</span>
+                </li>
+                <li>
+                  <span>嘉義縣</span>
+                </li>
+                <li>
+                  <span>雲林縣</span>
+                </li>
+                <li>
+                  <span>台南市</span>
+                </li>
+                <li>
+                  <span>高雄市</span>
+                </li>
+                <li>
+                  <span>澎湖縣</span>
+                </li>
+                <li>
+                  <span>金門縣</span>
+                </li>
+                <li>
+                  <span>屏東縣</span>
+                </li>
+                <li>
+                  <span>台東縣</span>
+                </li>
+                <li>
+                  <span>花蓮縣</span>
+                </li>
+                <li>
+                  <span class="cities-all">區域不限</span>
+                </li>
+              </ul>
+              <ul class="ul-town hidden">
+                <!-- 鄉鎮區域 -->
+                <li class="reset go-back-city">
+                  <span><i class="fa fa-reply"></i></span>
+                </li>
+                <!-- ngRepeat: a in areaList -->
+                <li>
+                  <label>
+                    <input
+                      area="全區"
+                      index="0"
+                      type="checkbox"
+                      class="chkbox area-chkbox"
+                    />
+                    <span class="ng-binding">全區</span>
+                  </label>
+                </li>
+              </ul>
             </div>
-            <label
-              ><input
-                type="checkbox"
-                index="-1"
-                class="chkbox chkbox-any ng-isolate-scope"
-                name="search-select-option-area"
-                value="unlimit"
-              /><span>坪數不限</span></label
+          </div>
+          <div class="m-search-select-wrap dropdown-box">
+            <a
+              href="#"
+              class="
+                search-select search-select-price
+                ng-binding
+                dropdown-toggle
+              "
+              id="dropdownMenuButton-price"
+              aria-expanded="false"
             >
-            <label ng-repeat="i in pyeongList" class="ng-scope">
-              <input
-                type="checkbox"
-                index="0"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-area"
-                value="0-20"
-              />
-              <span ng-if=" $index == 0" class="ng-binding ng-scope"
-                >20 坪以下</span
-              ></label
-            ><label ng-repeat="i in pyeongList" class="ng-scope">
-              <input
-                type="checkbox"
-                index="1"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-area"
-                value="20-30"
-              />
-              <span class="ng-binding ng-scope">20 坪 - 30 坪</span></label
-            ><label ng-repeat="i in pyeongList" class="ng-scope">
-              <input
-                type="checkbox"
-                index="2"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-area"
-                value="30-40"
-              /><span class="ng-binding ng-scope">30 坪 - 40 坪</span> </label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="3"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-area"
-                value="40-50"
-              />
-              <span class="ng-binding ng-scope">40 坪 - 50 坪</span></label
-            ><label class="ng-scope">
-              <input
-                type="checkbox"
-                index="4"
-                class="chkbox ng-isolate-scope"
-                name="search-select-option-area"
-                value="50-max"
-              />
-              <span class="ng-binding ng-scope">50 坪以上</span></label
+              總價不限
+            </a>
+            <div
+              class="search-select-option-price select-option dropdown-menu"
+              aria-labelledby="dropdownMenuButton-price"
             >
-            <div class="custom-block">
+              <label>
+                <input
+                  type="checkbox"
+                  index="-1"
+                  class="chkbox chkbox-any ng-isolate-scope"
+                  name="search-select-option-price"
+                  value="unlimit"
+                /><span>總價不限</span>
+              </label>
+              <label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="0"
+                  listtype="priceList"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-price"
+                  value="0-300"
+                />
+                <span class="ng-binding ng-scope">300 萬以下</span></label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="1"
+                  listtype="priceList"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-price"
+                  value="300-600"
+                />
+                <span class="ng-binding ng-scope">300 萬 - 600 萬</span></label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="2"
+                  listtype="priceList"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-price"
+                  value="600-900"
+                /><span class="ng-binding ng-scope"
+                  >600 萬 - 900 萬</span
+                ></label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="3"
+                  listtype="priceList"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-price"
+                  value="900-1200"
+                /><span class="ng-binding ng-scope"
+                  >900 萬 - 1200 萬</span
+                ></label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="4"
+                  listtype="priceList"
+                  class="chkbox"
+                  name="search-select-option-price"
+                  value="1200-max"
+                /><span class="ng-binding ng-scope">1200 萬以上</span></label
+              >
+              <div class="custom-block">
+                <div class="input-wrap">
+                  <input
+                    index="0"
+                    name="price1"
+                    class="custom-num num"
+                    type="text"
+                    size="5"
+                  />
+                  -
+                  <input
+                    index="1"
+                    name="price2"
+                    class="custom-num num"
+                    type="text"
+                    size="5"
+                  />
+                  萬
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-search-select-wrap dropdown-box">
+            <a
+              href="#"
+              class="
+                search-select search-select-area
+                ng-binding
+                dropdown-toggle
+              "
+              id="dropdownMenuButton-area"
+              aria-expanded="false"
+            >
+              坪數不限
+            </a>
+            <div
+              class="search-select-option-area select-option dropdown-menu"
+              aria-labelledby="dropdownMenuButton-area"
+            >
+              <div
+                style="
+                  height: 40px;
+                  line-height: 40px;
+                  padding-left: 0.7em;
+                  margin-bottom: 0.2em;
+                  border-bottom: 1px solid #eee;
+                "
+              >
+                <label class="inline">
+                  <input
+                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    type="radio"
+                    value="0"
+                    name="pyeongType-type"
+                  />
+                  <span>建物</span>
+                </label>
+                <label class="inline">
+                  <input
+                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    type="radio"
+                    ng-model="searchCondition.pyeongType"
+                    value="1"
+                    name="pyeongType-type"
+                  />
+                  <span>土地</span>
+                </label>
+                <label class="inline">
+                  <input
+                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    type="radio"
+                    ng-model="searchCondition.pyeongType"
+                    value="2"
+                    name="pyeongType-type"
+                  />
+                  <span>主+陽</span>
+                </label>
+              </div>
+              <label
+                ><input
+                  type="checkbox"
+                  index="-1"
+                  class="chkbox chkbox-any ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="unlimit"
+                /><span>坪數不限</span></label
+              >
+              <label ng-repeat="i in pyeongList" class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="0"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="0-20"
+                />
+                <span ng-if=" $index == 0" class="ng-binding ng-scope"
+                  >20 坪以下</span
+                ></label
+              ><label ng-repeat="i in pyeongList" class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="1"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="20-30"
+                />
+                <span class="ng-binding ng-scope">20 坪 - 30 坪</span></label
+              ><label ng-repeat="i in pyeongList" class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="2"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="30-40"
+                /><span class="ng-binding ng-scope">30 坪 - 40 坪</span> </label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="3"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="40-50"
+                />
+                <span class="ng-binding ng-scope">40 坪 - 50 坪</span></label
+              ><label class="ng-scope">
+                <input
+                  type="checkbox"
+                  index="4"
+                  class="chkbox ng-isolate-scope"
+                  name="search-select-option-area"
+                  value="50-max"
+                />
+                <span class="ng-binding ng-scope">50 坪以上</span></label
+              >
+              <div class="custom-block">
+                <div class="input-wrap">
+                  <input
+                    index="0"
+                    class="custom-num num ng-isolate-scope"
+                    type="text"
+                    size="3"
+                    name="area1"
+                  />
+                  -
+                  <input
+                    index="1"
+                    class="custom-num num ng-isolate-scope"
+                    type="text"
+                    size="3"
+                    name="area2"
+                  />
+                  坪
+                </div>
+              </div>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="search-text-keywords"
+            placeholder="編號、關鍵字、街道、大樓或學校"
+          /><button
+            class="search-text-query"
+            ga-buy-search=""
+            ga_action="buy_search_%%_keyword_click"
+            ga_label="buy_search_%%_keyword_btn"
+            ga_cat="buy_search"
+          >
+            <i class="fa fa-search fa-lg"></i>
+          </button>
+          <a href="#" class="search-more-fliter-switcher ng-binding"
+            >更多篩選(0)</a
+          >
+          <a href="" class="search-submit-btn">找房子</a>
+        </div>
+        <div class="m-search-more-filter-block">
+          <div class="search-filter-block-wrap">
+            <div class="col col-small">
+              <div class="chkbox-wrap">
+                <!-- ngRepeat: i in advConditions.houseType.val --><label
+                  ng-repeat="i in advConditions.houseType.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="電梯大樓"
+                    listtype="houseType"
+                    simple-chkbox=""
+                    ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_type_click"
+                    ga_label="buy_search_%%_type_電梯大樓"
+                    ga_cat="buy_search"
+                  />
+                  <span class="ng-binding">電梯大樓</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
+                  ng-repeat="i in advConditions.houseType.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="無電梯公寓"
+                    listtype="houseType"
+                    simple-chkbox=""
+                    ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_type_click"
+                    ga_label="buy_search_%%_type_無電梯公寓"
+                    ga_cat="buy_search"
+                  />
+                  <span class="ng-binding">無電梯公寓</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
+                  ng-repeat="i in advConditions.houseType.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="透天厝"
+                    listtype="houseType"
+                    simple-chkbox=""
+                    ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_type_click"
+                    ga_label="buy_search_%%_type_透天厝"
+                    ga_cat="buy_search"
+                  />
+                  <span class="ng-binding">透天厝</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
+                  ng-repeat="i in advConditions.houseType.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="別墅"
+                    listtype="houseType"
+                    simple-chkbox=""
+                    ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_type_click"
+                    ga_label="buy_search_%%_type_別墅"
+                    ga_cat="buy_search"
+                  />
+                  <span class="ng-binding">別墅</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val -->
+              </div>
+              <div class="chkbox-wrap sp">
+                <!-- ngRepeat: i in advConditions.car.val --><label
+                  ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
+                  ng-repeat="i in advConditions.car.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="有車位"
+                    listtype="car"
+                    simple-chkbox=""
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_park_click"
+                    ga_label="buy_search_%%_park_有車位"
+                    ga_cat="buy_search"
+                    ng-checked=" $index == 0 &amp;&amp; searchCondition.advConditions.car[0] == 'true' || $index == 1 &amp;&amp; searchCondition.advConditions.car[0] == 'false' "
+                  />
+                  <span class="ng-binding">有車位</span> </label
+                ><!-- end ngRepeat: i in advConditions.car.val --><label
+                  ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
+                  ng-repeat="i in advConditions.car.val"
+                  class="ng-scope"
+                >
+                  <input
+                    type="checkbox"
+                    class="chkbox ng-isolate-scope"
+                    value="無車位"
+                    listtype="car"
+                    simple-chkbox=""
+                    ga-buy-search=""
+                    ga_action="buy_search_%%_park_click"
+                    ga_label="buy_search_%%_park_無車位"
+                    ga_cat="buy_search"
+                    ng-checked=" $index == 0 &amp;&amp; searchCondition.advConditions.car[0] == 'true' || $index == 1 &amp;&amp; searchCondition.advConditions.car[0] == 'false' "
+                  />
+                  <span class="ng-binding">無車位</span> </label
+                ><!-- end ngRepeat: i in advConditions.car.val -->
+              </div>
+            </div>
+            <div
+              class="col select-option"
+              ng-hide="searchCondition.searchFor == 'earth'"
+            >
+              <label>
+                <input
+                  type="checkbox"
+                  index="-1"
+                  listtype="houseAge"
+                  class="chkbox chkbox-any ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_none"
+                  ga_cat="buy_search"
+                /><span> 屋齡不限</span>
+              </label>
+              <!-- ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="0"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_-1"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 --><span
+                  ng-if=" $index == 0 "
+                  class="ng-binding ng-scope"
+                  >1 年以下</span
+                ><!-- end ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="1"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_1-5"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
+                  ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
+                  class="ng-binding ng-scope"
+                >
+                  1 年 - 5 年 </span
+                ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="2"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_5-10"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
+                  ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
+                  class="ng-binding ng-scope"
+                >
+                  5 年 - 10 年 </span
+                ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="3"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_10-20"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
+                  ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
+                  class="ng-binding ng-scope"
+                >
+                  10 年 - 20 年 </span
+                ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="4"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_20-30"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
+                  ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
+                  class="ng-binding ng-scope"
+                >
+                  20 年 - 30 年 </span
+                ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
+                ng-repeat="i in advConditions.houseAge.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="5"
+                  listtype="houseAge"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_age_click"
+                  ga_label="buy_search_%%_age_30-"
+                  ga_cat="buy_search"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
+                <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --><span
+                  ng-if=" $index == (advConditions.houseAge.val.length - 1) "
+                  class="ng-binding ng-scope"
+                  >30 年以上</span
+                ><!-- end ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
+              ><!-- end ngRepeat: i in advConditions.houseAge.val -->
               <div class="input-wrap">
                 <input
                   index="0"
+                  listtype="houseAge"
                   class="custom-num num ng-isolate-scope"
                   type="text"
-                  size="3"
-                  name="area1"
+                  size="2"
                 />
                 -
                 <input
                   index="1"
+                  listtype="houseAge"
                   class="custom-num num ng-isolate-scope"
                   type="text"
-                  size="3"
-                  name="area2"
+                  size="2"
                 />
-                坪
+                年
+              </div>
+            </div>
+            <div
+              class="col select-option"
+              ng-hide="searchCondition.searchFor == 'earth'"
+            >
+              <label>
+                <input
+                  type="checkbox"
+                  index="-1"
+                  listtype="floors"
+                  class="chkbox chkbox-any ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_none"
+                  ga_cat="buy_search"
+                /><span> 樓層不限</span>
+              </label>
+              <!-- ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="0"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_0-1"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 --><span
+                  ng-if="$index == 0"
+                  data-min="0"
+                  data-max="0"
+                  class="ng-scope"
+                  >低於 1 樓</span
+                ><!-- end ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="1"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_1-2"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 --><span
+                  ng-if="$index == 1"
+                  data-min="1"
+                  data-max="1"
+                  class="ng-binding ng-scope"
+                >
+                  1 樓</span
+                ><!-- end ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="2"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_2-6"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) --><span
+                  ng-if="$index > 1 &amp;&amp; $index < (advConditions.floors.val.length-2)"
+                  data-min="2"
+                  data-max="6"
+                  class="ng-binding ng-scope"
+                  >2-6樓</span
+                ><!-- end ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="4"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_7-12"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) --><span
+                  ng-if="$index > 1 &amp;&amp; $index < (advConditions.floors.val.length-2)"
+                  data-min="7"
+                  data-max="12"
+                  class="ng-binding ng-scope"
+                  >7-12樓</span
+                ><!-- end ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="6"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_13-"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 --><span
+                  ng-if="$index == advConditions.floors.val.length - 2"
+                  data-min="13"
+                  data-max="99"
+                  class="ng-binding ng-scope"
+                  >13 樓以上</span
+                ><!-- end ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
+                ng-repeat="i in advConditions.floors.val"
+                ng-if="$index != 3 &amp;&amp; $index != 5"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="7"
+                  listtype="floors"
+                  class="chkbox ng-isolate-scope checkbox_sp"
+                  chkbox-area=""
+                  ga-buy-search=""
+                  ga_action="buy_search_%%_floor_click"
+                  ga_label="buy_search_%%_floor_-"
+                  ga_cat="buy_search"
+                  ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
+                />
+                <!-- ngIf: $index == 0 -->
+                <!-- ngIf: $index == 1 -->
+                <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
+                <!-- ngIf: $index == advConditions.floors.val.length - 1 --><span
+                  ng-if="$index == advConditions.floors.val.length - 1"
+                  class="ng-scope"
+                >
+                  頂樓</span
+                ><!-- end ngIf: $index == advConditions.floors.val.length - 1 --> </label
+              ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val -->
+              <div class="input-wrap">
+                <input
+                  index="0"
+                  listtype="floors"
+                  class="custom-num num ng-isolate-scope"
+                  type="text"
+                  size="2"
+                />
+                -
+                <input
+                  index="1"
+                  listtype="floors"
+                  class="custom-num num ng-isolate-scope"
+                  type="text"
+                  size="2"
+                />
+                樓
+              </div>
+            </div>
+            <div
+              class="col select-option"
+              ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
+            >
+              <label
+                ><input
+                  type="checkbox"
+                  index="-1"
+                  listtype="rooms"
+                  class="chkbox chkbox-any ng-isolate-scope"
+                  chkbox-area=""
+                /><span> 房數不限</span></label
+              >
+              <!-- ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="0"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
+                  ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
+                  class="ng-binding ng-scope"
+                >
+                  1 房</span
+                ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="1"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
+                  ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
+                  class="ng-binding ng-scope"
+                >
+                  2 房</span
+                ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="2"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
+                  ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
+                  class="ng-binding ng-scope"
+                >
+                  3 房</span
+                ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="3"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
+                  ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
+                  class="ng-binding ng-scope"
+                >
+                  4 房</span
+                ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="4"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 --><span
+                  ng-if="$index == advConditions.rooms.val.length-2"
+                  class="ng-binding ng-scope"
+                >
+                  5 房以上</span
+                ><!-- end ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val --><label
+                ng-repeat="i in advConditions.rooms.val"
+                class="ng-scope"
+              >
+                <input
+                  type="checkbox"
+                  index="5"
+                  listtype="rooms"
+                  class="chkbox ng-isolate-scope checkbox_sp"
+                  chkbox-area=""
+                  ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
+                  ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
+                />
+                <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
+                <!-- ngIf: $index == advConditions.rooms.val.length-1 --><span
+                  ng-if="$index == advConditions.rooms.val.length-1"
+                  class="ng-scope"
+                >
+                  含加蓋</span
+                ><!-- end ngIf: $index == advConditions.rooms.val.length-1 --> </label
+              ><!-- end ngRepeat: i in advConditions.rooms.val -->
+              <div class="input-wrap">
+                <input
+                  index="0"
+                  listtype="rooms"
+                  class="custom-num num ng-isolate-scope"
+                  type="text"
+                  size="2"
+                />
+                -
+                <input
+                  index="1"
+                  listtype="rooms"
+                  class="custom-num num ng-isolate-scope"
+                  type="text"
+                  size="2"
+                />
+                房
               </div>
             </div>
           </div>
         </div>
-        <input
-          type="text"
-          class="search-text-keywords"
-          placeholder="編號、關鍵字、街道、大樓或學校"
-        /><button
-          class="search-text-query"
-          ga-buy-search=""
-          ga_action="buy_search_%%_keyword_click"
-          ga_label="buy_search_%%_keyword_btn"
-          ga_cat="buy_search"
-        >
-          <i class="fa fa-search fa-lg"></i>
-        </button>
-        <a href="#" class="search-more-fliter-switcher ng-binding"
-          >更多篩選(0)</a
-        >
-        <a href="" class="search-submit-btn">找房子</a>
       </div>
-      <div class="m-search-more-filter-block">
-        <div class="search-filter-block-wrap">
-          <div class="col col-small">
-            <div class="chkbox-wrap">
-              <!-- ngRepeat: i in advConditions.houseType.val --><label
-                ng-repeat="i in advConditions.houseType.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="電梯大樓"
-                  listtype="houseType"
-                  simple-chkbox=""
-                  ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_type_click"
-                  ga_label="buy_search_%%_type_電梯大樓"
-                  ga_cat="buy_search"
-                />
-                <span class="ng-binding">電梯大樓</span> </label
-              ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                ng-repeat="i in advConditions.houseType.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="無電梯公寓"
-                  listtype="houseType"
-                  simple-chkbox=""
-                  ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_type_click"
-                  ga_label="buy_search_%%_type_無電梯公寓"
-                  ga_cat="buy_search"
-                />
-                <span class="ng-binding">無電梯公寓</span> </label
-              ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                ng-repeat="i in advConditions.houseType.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="透天厝"
-                  listtype="houseType"
-                  simple-chkbox=""
-                  ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_type_click"
-                  ga_label="buy_search_%%_type_透天厝"
-                  ga_cat="buy_search"
-                />
-                <span class="ng-binding">透天厝</span> </label
-              ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                ng-repeat="i in advConditions.houseType.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="別墅"
-                  listtype="houseType"
-                  simple-chkbox=""
-                  ng-checked="searchCondition.advConditions.houseType.indexOf(i) > -1"
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_type_click"
-                  ga_label="buy_search_%%_type_別墅"
-                  ga_cat="buy_search"
-                />
-                <span class="ng-binding">別墅</span> </label
-              ><!-- end ngRepeat: i in advConditions.houseType.val -->
-            </div>
-            <div class="chkbox-wrap sp">
-              <!-- ngRepeat: i in advConditions.car.val --><label
-                ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
-                ng-repeat="i in advConditions.car.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="有車位"
-                  listtype="car"
-                  simple-chkbox=""
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_park_click"
-                  ga_label="buy_search_%%_park_有車位"
-                  ga_cat="buy_search"
-                  ng-checked=" $index == 0 &amp;&amp; searchCondition.advConditions.car[0] == 'true' || $index == 1 &amp;&amp; searchCondition.advConditions.car[0] == 'false' "
-                />
-                <span class="ng-binding">有車位</span> </label
-              ><!-- end ngRepeat: i in advConditions.car.val --><label
-                ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
-                ng-repeat="i in advConditions.car.val"
-                class="ng-scope"
-              >
-                <input
-                  type="checkbox"
-                  class="chkbox ng-isolate-scope"
-                  value="無車位"
-                  listtype="car"
-                  simple-chkbox=""
-                  ga-buy-search=""
-                  ga_action="buy_search_%%_park_click"
-                  ga_label="buy_search_%%_park_無車位"
-                  ga_cat="buy_search"
-                  ng-checked=" $index == 0 &amp;&amp; searchCondition.advConditions.car[0] == 'true' || $index == 1 &amp;&amp; searchCondition.advConditions.car[0] == 'false' "
-                />
-                <span class="ng-binding">無車位</span> </label
-              ><!-- end ngRepeat: i in advConditions.car.val -->
-            </div>
+      <div class="l-main-list">
+        <div class="list-hd-outer">
+          <div class="list-type">
+            <span class="list-text active"
+              ><i class="fa fa-list-ul"></i> 列表</span
+            >
+            <a href="#" class="list-map"><i class="i-map"></i> 地圖</a>
           </div>
-          <div
-            class="col select-option"
-            ng-hide="searchCondition.searchFor == 'earth'"
+        </div>
+        <div class="list-hd-inner">
+          <a id="filterAll" href="" filter="" class="list-filter active"
+            ><span>全部</span></a
           >
-            <label>
-              <input
-                type="checkbox"
-                index="-1"
-                listtype="houseAge"
-                class="chkbox chkbox-any ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_none"
-                ga_cat="buy_search"
-              /><span> 屋齡不限</span>
-            </label>
-            <!-- ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="0"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_-1"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 --><span
-                ng-if=" $index == 0 "
-                class="ng-binding ng-scope"
-                >1 年以下</span
-              ><!-- end ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="1"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_1-5"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
-                class="ng-binding ng-scope"
-              >
-                1 年 - 5 年 </span
-              ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="2"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_5-10"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
-                class="ng-binding ng-scope"
-              >
-                5 年 - 10 年 </span
-              ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="3"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_10-20"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
-                class="ng-binding ng-scope"
-              >
-                10 年 - 20 年 </span
-              ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="4"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_20-30"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) --><span
-                ng-if=" $index > 0 &amp;&amp; $index < (advConditions.houseAge.val.length-1) "
-                class="ng-binding ng-scope"
-              >
-                20 年 - 30 年 </span
-              ><!-- end ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val --><label
-              ng-repeat="i in advConditions.houseAge.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="5"
-                listtype="houseAge"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_age_click"
-                ga_label="buy_search_%%_age_30-"
-                ga_cat="buy_search"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index > 0 && $index < (advConditions.houseAge.val.length-1) -->
-              <!-- ngIf: $index == (advConditions.houseAge.val.length - 1) --><span
-                ng-if=" $index == (advConditions.houseAge.val.length - 1) "
-                class="ng-binding ng-scope"
-                >30 年以上</span
-              ><!-- end ngIf: $index == (advConditions.houseAge.val.length - 1) --> </label
-            ><!-- end ngRepeat: i in advConditions.houseAge.val -->
-            <div class="input-wrap">
-              <input
-                index="0"
-                listtype="houseAge"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              -
-              <input
-                index="1"
-                listtype="houseAge"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              年
-            </div>
-          </div>
-          <div
-            class="col select-option"
-            ng-hide="searchCondition.searchFor == 'earth'"
+          <a id="filterIStaging" href="" filter="IStaging" class="list-filter"
+            ><span>實境找房</span></a
           >
-            <label>
-              <input
-                type="checkbox"
-                index="-1"
-                listtype="floors"
-                class="chkbox chkbox-any ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_none"
-                ga_cat="buy_search"
-              /><span> 樓層不限</span>
-            </label>
-            <!-- ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="0"
-                listtype="floors"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_0-1"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 --><span
-                ng-if="$index == 0"
-                data-min="0"
-                data-max="0"
-                class="ng-scope"
-                >低於 1 樓</span
-              ><!-- end ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="1"
-                listtype="floors"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_1-2"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 --><span
-                ng-if="$index == 1"
-                data-min="1"
-                data-max="1"
-                class="ng-binding ng-scope"
-              >
-                1 樓</span
-              ><!-- end ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="2"
-                listtype="floors"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_2-6"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) --><span
-                ng-if="$index > 1 &amp;&amp; $index < (advConditions.floors.val.length-2)"
-                data-min="2"
-                data-max="6"
-                class="ng-binding ng-scope"
-                >2-6樓</span
-              ><!-- end ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="4"
-                listtype="floors"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_7-12"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) --><span
-                ng-if="$index > 1 &amp;&amp; $index < (advConditions.floors.val.length-2)"
-                data-min="7"
-                data-max="12"
-                class="ng-binding ng-scope"
-                >7-12樓</span
-              ><!-- end ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="6"
-                listtype="floors"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_13-"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 --><span
-                ng-if="$index == advConditions.floors.val.length - 2"
-                data-min="13"
-                data-max="99"
-                class="ng-binding ng-scope"
-                >13 樓以上</span
-              ><!-- end ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val --><!-- ngIf: $index != 3 && $index != 5 --><label
-              ng-repeat="i in advConditions.floors.val"
-              ng-if="$index != 3 &amp;&amp; $index != 5"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="7"
-                listtype="floors"
-                class="chkbox ng-isolate-scope checkbox_sp"
-                chkbox-area=""
-                ga-buy-search=""
-                ga_action="buy_search_%%_floor_click"
-                ga_label="buy_search_%%_floor_-"
-                ga_cat="buy_search"
-                ng-checked="$index == advConditions.floors.val.length - 1 &amp;&amp; searchCondition.advConditions.floors.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.floors.val.length - 1 }"
-              />
-              <!-- ngIf: $index == 0 -->
-              <!-- ngIf: $index == 1 -->
-              <!-- ngIf: $index > 1 && $index < (advConditions.floors.val.length-2) -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 2 -->
-              <!-- ngIf: $index == advConditions.floors.val.length - 1 --><span
-                ng-if="$index == advConditions.floors.val.length - 1"
-                class="ng-scope"
-              >
-                頂樓</span
-              ><!-- end ngIf: $index == advConditions.floors.val.length - 1 --> </label
-            ><!-- end ngIf: $index != 3 && $index != 5 --><!-- end ngRepeat: i in advConditions.floors.val -->
-            <div class="input-wrap">
-              <input
-                index="0"
-                listtype="floors"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              -
-              <input
-                index="1"
-                listtype="floors"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              樓
-            </div>
-          </div>
-          <div
-            class="col select-option"
-            ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
+          <a
+            id="filterPrice"
+            href=""
+            filter="pricereduction"
+            class="list-filter"
+            ><span>降價屋</span></a
           >
-            <label
-              ><input
-                type="checkbox"
-                index="-1"
-                listtype="rooms"
-                class="chkbox chkbox-any ng-isolate-scope"
-                chkbox-area=""
-              /><span> 房數不限</span></label
-            >
-            <!-- ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="0"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
-                ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
-                class="ng-binding ng-scope"
+          <a id="filterNew" href="" filter="new" class="list-filter"
+            ><span>新上架</span></a
+          >
+          <div class="list-sort-type m-select-box-wrap dropdown-box">
+            <a href="#" class="list-sort-handler m-select-box">預設排序</a>
+            <div class="m-select-box-option has-border arrow-right">
+              <a data-od="" class="list-sort-option label" href="">預設排序</a>
+              <a data-od="11" class="list-sort-option label" href=""
+                >總價: 低 ↗ 高&gt;</a
               >
-                1 房</span
-              ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="1"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
-                ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
-                class="ng-binding ng-scope"
+              <a data-od="20" class="list-sort-option label" href=""
+                >每坪單價: <span class="right">低 ↗ 高</span></a
               >
-                2 房</span
-              ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="2"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
-                ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
-                class="ng-binding ng-scope"
+              <a data-od="30" class="list-sort-option label" href=""
+                >降幅: <span class="right">高 ↘ 低</span></a
               >
-                3 房</span
-              ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="3"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 --><span
-                ng-if="$index < advConditions.rooms.val.length - 1 &amp;&amp; $index != advConditions.rooms.val.length-2"
-                class="ng-binding ng-scope"
+              <a data-od="40" class="list-sort-option label" href=""
+                >建物坪數: <span class="right">大 ↘ 小</span></a
               >
-                4 房</span
-              ><!-- end ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="4"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 --><span
-                ng-if="$index == advConditions.rooms.val.length-2"
-                class="ng-binding ng-scope"
+              <a data-od="50" class="list-sort-option label" href=""
+                >主+陽坪數: <span class="right">大 ↘ 小</span></a
               >
-                5 房以上</span
-              ><!-- end ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val --><label
-              ng-repeat="i in advConditions.rooms.val"
-              class="ng-scope"
-            >
-              <input
-                type="checkbox"
-                index="5"
-                listtype="rooms"
-                class="chkbox ng-isolate-scope checkbox_sp"
-                chkbox-area=""
-                ng-checked="$index == advConditions.rooms.val.length - 1 &amp;&amp; searchCondition.advConditions.rooms.sp[0] == 'true'"
-                ng-class="{ 'checkbox_sp' : $index == advConditions.rooms.val.length-1 }"
-              />
-              <!-- ngIf: $index < advConditions.rooms.val.length - 1 && $index != advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-2 -->
-              <!-- ngIf: $index == advConditions.rooms.val.length-1 --><span
-                ng-if="$index == advConditions.rooms.val.length-1"
-                class="ng-scope"
+              <a data-od="60" class="list-sort-option label" href=""
+                >屋齡: <span class="right">大 ↘ 小</span></a
               >
-                含加蓋</span
-              ><!-- end ngIf: $index == advConditions.rooms.val.length-1 --> </label
-            ><!-- end ngRepeat: i in advConditions.rooms.val -->
-            <div class="input-wrap">
-              <input
-                index="0"
-                listtype="rooms"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              -
-              <input
-                index="1"
-                listtype="rooms"
-                class="custom-num num ng-isolate-scope"
-                type="text"
-                size="2"
-              />
-              房
+              <a data-od="70" class="list-sort-option label" href=""
+                >土地坪數: <span class="right">大 ↘ 小</span></a
+              >
             </div>
           </div>
         </div>
+        <ul class="l-item-list">
+          <li class="m-list-item">
+            <a
+              href="#"
+              class="item-img"
+              title="金獅湖漢神線上五車位巷內武市樓店"
+            >
+              <img
+                alt="金獅湖漢神線上五車位巷內武市樓店"
+                src="https://fps.hfcdn.com/v1/image/?key=NF58Ko5oaCv6kwjMOBYEhB744jeBNfW4CkPG08uRp57MTdOx_LRnsmaDeu-flDK9qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVZBTVyE902uGua3iB7hgAAKPHTL2hxmCpYvJvW1CAemDs1N2ae2SjNbDQM682J6a9wBsVAjhMPbamQPwvpiSROzsWh15fxUcvhQFGymqo8g21doSW1ZZihP_njpYuw4QnprJ-indaUcKBd9hk8aZg8MnUezEOQMv6i9KPzq5D21B8MW899PE8ynnpmkhF_dmrIO2l_YXPGQr925gg1d9mkG3RFRGXpmVP&amp;width=240&amp;height=240&amp;width=240&amp;height=240"
+              />
+            </a>
+            <div class="item-info">
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="item-title ng-scope"
+                title="金獅湖漢神線上五車位巷內武市樓店"
+              >
+                <h3>金獅湖漢神線上五車位巷內武市樓店　高雄市三民區天祥一路</h3>
+              </a>
+              <div class="item-description">
+                1.含增建上看50坪開放空間，隨你隔間或裝修。 &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                2.室外未保存登記空間可停高達6台車。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; 3.步行3分鐘至金獅湖畔。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; 4.衛浴皆開窗。
+              </div>
+              <ul class="item-info-detail">
+                <li>電梯大樓</li>
+                <li>7.4年</li>
+                <li>1 ~ 1 / 15 樓</li>
+                <li>建物 67.63坪</li>
+                <li>土地 9.91坪</li>
+                <li>
+                  <span>主</span>
+                  <span>+陽</span>
+                  39.11 坪
+                </li>
+              </ul>
+              <div class="item-tags">
+                <img
+                  src="./images/IStaging2.png"
+                  style="position: relative; top: 3px"
+                /><span class="highlight">新上架</span>
+              </div>
+            </div>
+            <div class="item-price">
+              <div class="price"><span class="price-num">2580</span> 萬</div>
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="view-map-btn"
+                >地圖街景</a
+              >
+            </div>
+          </li>
+          <li class="m-list-item">
+            <a
+              href="#"
+              class="item-img"
+              title="金獅湖漢神線上五車位巷內武市樓店"
+            >
+              <img
+                alt="金獅湖漢神線上五車位巷內武市樓店"
+                src="https://fps.hfcdn.com/v1/image/?key=NF58Ko5oaCv6kwjMOBYEhB744jeBNfW4CkPG08uRp57MTdOx_LRnsmaDeu-flDK9qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVZBTVyE902uGua3iB7hgAAKPHTL2hxmCpYvJvW1CAemDs1N2ae2SjNbDQM682J6a9wBsVAjhMPbamQPwvpiSROzsWh15fxUcvhQFGymqo8g21doSW1ZZihP_njpYuw4QnprJ-indaUcKBd9hk8aZg8MnUezEOQMv6i9KPzq5D21B8MW899PE8ynnpmkhF_dmrIO2l_YXPGQr925gg1d9mkG3RFRGXpmVP&amp;width=240&amp;height=240&amp;width=240&amp;height=240"
+              />
+            </a>
+            <div class="item-info">
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="item-title ng-scope"
+                title="金獅湖漢神線上五車位巷內武市樓店"
+              >
+                <h3>金獅湖漢神線上五車位巷內武市樓店　高雄市三民區天祥一路</h3>
+              </a>
+              <div class="item-description">
+                1.含增建上看50坪開放空間，隨你隔間或裝修。 &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                2.室外未保存登記空間可停高達6台車。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; 3.步行3分鐘至金獅湖畔。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; 4.衛浴皆開窗。
+              </div>
+              <ul class="item-info-detail">
+                <li>電梯大樓</li>
+                <li>7.4年</li>
+                <li>1 ~ 1 / 15 樓</li>
+                <li>建物 67.63坪</li>
+                <li>土地 9.91坪</li>
+                <li>
+                  <span>主</span>
+                  <span>+陽</span>
+                  39.11 坪
+                </li>
+              </ul>
+              <div class="item-tags">
+                <img
+                  src="./images/IStaging2.png"
+                  style="position: relative; top: 3px"
+                /><span class="highlight">新上架</span>
+              </div>
+            </div>
+            <div class="item-price">
+              <div class="price"><span class="price-num">2580</span> 萬</div>
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="view-map-btn"
+                >地圖街景</a
+              >
+            </div>
+          </li>
+          <li class="m-list-item">
+            <a
+              href="#"
+              class="item-img"
+              title="金獅湖漢神線上五車位巷內武市樓店"
+            >
+              <img
+                alt="金獅湖漢神線上五車位巷內武市樓店"
+                src="https://fps.hfcdn.com/v1/image/?key=NF58Ko5oaCv6kwjMOBYEhB744jeBNfW4CkPG08uRp57MTdOx_LRnsmaDeu-flDK9qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVZBTVyE902uGua3iB7hgAAKPHTL2hxmCpYvJvW1CAemDs1N2ae2SjNbDQM682J6a9wBsVAjhMPbamQPwvpiSROzsWh15fxUcvhQFGymqo8g21doSW1ZZihP_njpYuw4QnprJ-indaUcKBd9hk8aZg8MnUezEOQMv6i9KPzq5D21B8MW899PE8ynnpmkhF_dmrIO2l_YXPGQr925gg1d9mkG3RFRGXpmVP&amp;width=240&amp;height=240&amp;width=240&amp;height=240"
+              />
+            </a>
+            <div class="item-info">
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="item-title ng-scope"
+                title="金獅湖漢神線上五車位巷內武市樓店"
+              >
+                <h3>金獅湖漢神線上五車位巷內武市樓店　高雄市三民區天祥一路</h3>
+              </a>
+              <div class="item-description">
+                1.含增建上看50坪開放空間，隨你隔間或裝修。 &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                2.室外未保存登記空間可停高達6台車。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; 3.步行3分鐘至金獅湖畔。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; 4.衛浴皆開窗。
+              </div>
+              <ul class="item-info-detail">
+                <li>電梯大樓</li>
+                <li>7.4年</li>
+                <li>1 ~ 1 / 15 樓</li>
+                <li>建物 67.63坪</li>
+                <li>土地 9.91坪</li>
+                <li>
+                  <span>主</span>
+                  <span>+陽</span>
+                  39.11 坪
+                </li>
+              </ul>
+              <div class="item-tags">
+                <img
+                  src="./images/IStaging2.png"
+                  style="position: relative; top: 3px"
+                /><span class="highlight">新上架</span>
+              </div>
+            </div>
+            <div class="item-price">
+              <div class="price"><span class="price-num">2580</span> 萬</div>
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="view-map-btn"
+                >地圖街景</a
+              >
+            </div>
+          </li>
+          <li class="m-list-item">
+            <a
+              href="#"
+              class="item-img"
+              title="金獅湖漢神線上五車位巷內武市樓店"
+            >
+              <img
+                alt="金獅湖漢神線上五車位巷內武市樓店"
+                src="https://fps.hfcdn.com/v1/image/?key=NF58Ko5oaCv6kwjMOBYEhB744jeBNfW4CkPG08uRp57MTdOx_LRnsmaDeu-flDK9qVhtUUJ4lA_cF1mBh5MY1RWd5eEaa7mn9qxu8f6s-rtKfVoBsurTgAnsNQ3b1ueVZBTVyE902uGua3iB7hgAAKPHTL2hxmCpYvJvW1CAemDs1N2ae2SjNbDQM682J6a9wBsVAjhMPbamQPwvpiSROzsWh15fxUcvhQFGymqo8g21doSW1ZZihP_njpYuw4QnprJ-indaUcKBd9hk8aZg8MnUezEOQMv6i9KPzq5D21B8MW899PE8ynnpmkhF_dmrIO2l_YXPGQr925gg1d9mkG3RFRGXpmVP&amp;width=240&amp;height=240&amp;width=240&amp;height=240"
+              />
+            </a>
+            <div class="item-info">
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="item-title ng-scope"
+                title="金獅湖漢神線上五車位巷內武市樓店"
+              >
+                <h3>金獅湖漢神線上五車位巷內武市樓店　高雄市三民區天祥一路</h3>
+              </a>
+              <div class="item-description">
+                1.含增建上看50坪開放空間，隨你隔間或裝修。 &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                2.室外未保存登記空間可停高達6台車。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; 3.步行3分鐘至金獅湖畔。 &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; 4.衛浴皆開窗。
+              </div>
+              <ul class="item-info-detail">
+                <li>電梯大樓</li>
+                <li>7.4年</li>
+                <li>1 ~ 1 / 15 樓</li>
+                <li>建物 67.63坪</li>
+                <li>土地 9.91坪</li>
+                <li>
+                  <span>主</span>
+                  <span>+陽</span>
+                  39.11 坪
+                </li>
+              </ul>
+              <div class="item-tags">
+                <img
+                  src="./images/IStaging2.png"
+                  style="position: relative; top: 3px"
+                /><span class="highlight">新上架</span>
+              </div>
+            </div>
+            <div class="item-price">
+              <div class="price"><span class="price-num">2580</span> 萬</div>
+              <a
+                href="/house/detail/5029520"
+                target="_blank"
+                class="view-map-btn"
+                >地圖街景</a
+              >
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <script
@@ -1697,9 +2000,11 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="./tmpData/data.js"></script>
     <script src="./js/house.js"></script>
     <script src="./js/house-city.js"></script>
     <script src="./js/house-price.js"></script>
     <script src="./js/house-area.js"></script>
+    <script src="./js/house-data.js"></script>
   </body>
 </html>
