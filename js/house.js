@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  setHouseTypeEvent();
+  setCarEvent();
+
   let tabList = document.querySelectorAll(".m-search-for-lists li");
   tabList = Array.apply(null, tabList);
   tabList.forEach((item) => {
@@ -38,6 +41,8 @@ function handleClickTab(e) {
   });
 
   e.target.classList.add("is-active");
+
+  postToSearchHouseData();
 }
 
 function handleClickMoreFilter(e) {
@@ -46,4 +51,71 @@ function handleClickMoreFilter(e) {
   document
     .querySelector(".m-search-more-filter-block")
     .classList.toggle("is-active");
+}
+
+function setFilterCount() {
+  let count = 0;
+  if (
+    floorList.length > 0 ||
+    document.querySelector("input[name='top']").checked
+  ) {
+    count++;
+  }
+  if (ageList.length > 0) {
+    count++;
+  }
+  if (
+    roomList.length > 0 ||
+    document.querySelector("input[name='roomSp']").checked
+  ) {
+    count++;
+  }
+  if (getHouseTypeDom().some((item) => item.checked)) {
+    count++;
+  }
+  if (getCarDom().some((item) => item.checked)) {
+    count++;
+  }
+
+  document.querySelector(".filter-count").textContent = count;
+}
+
+function getHouseTypeDom() {
+  let houseTypeInputDom = document.querySelectorAll("input[name='houseType']");
+  return Array.apply(null, houseTypeInputDom);
+}
+
+function setHouseTypeEvent() {
+  let houseTypeDom = getHouseTypeDom();
+  houseTypeDom.forEach((item) => {
+    item.addEventListener("change", handleChangeHouseType);
+  });
+}
+
+function handleChangeHouseType() {
+  setFilterCount();
+}
+
+function getCarDom() {
+  let carInputDom = document.querySelectorAll("input[name='car']");
+  return Array.apply(null, carInputDom);
+}
+
+function setCarEvent() {
+  let carDom = getCarDom();
+  carDom.forEach((item) => {
+    item.addEventListener("change", handleChangeCar);
+  });
+}
+
+function handleChangeCar(e) {
+  if (e.target.checked) {
+    let carDom = getCarDom();
+    carDom.forEach((item) => {
+      item.checked = false;
+    });
+    e.target.checked = true;
+  }
+
+  setFilterCount();
 }
