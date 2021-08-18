@@ -1448,33 +1448,15 @@
         <div class="m-pagination" style="display: block">
           <ul
             class="pagination ng-isolate-scope ng-valid"
-            total-items="totalItems"
-            items-per-page="itemsPerPage"
-            max-size="maxSize"
             first-text="|<"
             last-text=">|"
             previous-text="<"
             next-text=">"
-            ng-model="currentPage"
-            ng-change="searchPageChang()"
           >
-            <li
-              ng-if="::directionLinks"
-              ng-class="{disabled: noPrevious()||ngDisabled}"
-              class="pagination-prev ng-scope disabled"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page - 1, $event)"
-                class="ng-binding"
-                >&lt;</a
-              >
+            <li class="pagination-prev ng-scope disabled">
+              <a href="#">&lt;</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope active"
-            >
+            <li class="pagination-page ng-scope active">
               <a
                 href=""
                 ng-click="selectPage(page.number, $event)"

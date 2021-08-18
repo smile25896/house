@@ -1,4 +1,5 @@
-[
+{"totalPage": 20,
+  "data":[
   {
     "RowNo":1,
     "CaseSID":5034400,
@@ -1529,4 +1530,4 @@
     "SPCNum":1,
     "PicNum":9
   }
-]
+]}

@@ -1,7 +1,11 @@
 $(document).ready(function () {
   setSearchButtonDom();
   postToSearchHouseData();
+  setPagination();
 });
+
+let totalPage = 0;
+let currentPage = 20;
 
 function setSearchButtonDom() {
   document
@@ -92,7 +96,7 @@ function postToSearchHouseData() {
     Pyeong,
     PyeongType,
     SearchFor: getSearchFor(),
-    Page: 1,
+    Page: currentPage,
     Filiter: "",
     Keywords,
     HouseType,
@@ -112,8 +116,9 @@ function postToSearchHouseData() {
       return response.json();
     })
     .then(function (myJson) {
-      console.log(myJson);
-      setHouseDom(myJson);
+      setHouseDom(myJson.data);
+      totalPage = myJson.totalPage;
+      setPagination();
     });
 }
 
@@ -186,4 +191,73 @@ function setHouseDom(data) {
 function getSearchFor() {
   return document.querySelector(".m-search-for-lists .tab.is-active").dataset
     .tab;
+}
+
+function setPagination() {
+  let disablePrev = currentPage === 1 ? "disabled" : "";
+  let disableNext = currentPage === totalPage ? "disabled" : "";
+  let domString = `
+<li class="pagination-prev ${disablePrev}">
+  <span data-page="${currentPage - 1}">&lt;</span>
+</li>`;
+  if (currentPage <= 6) {
+    for (let i = 1; i <= totalPage && i <= 10; i++) {
+      let active = "";
+      if (i === currentPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
+    }
+  } else if (currentPage + 4 <= totalPage) {
+    for (let i = currentPage - 5; i <= currentPage + 4; i++) {
+      let active = "";
+      if (i === currentPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
+    }
+  } else {
+    let prevCount = 9 - (totalPage - currentPage);
+    for (let i = currentPage - prevCount; i <= totalPage; i++) {
+      let active = "";
+      if (i === currentPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
+    }
+  }
+
+  domString += `
+<li class="pagination-next ${disableNext}">
+  <span data-page="${currentPage + 1}">&gt;</span>
+</li>`;
+
+  document.querySelector("ul.pagination").innerHTML = domString;
+
+  let pageDoms = getPageButtonDom();
+  pageDoms.forEach((item) => {
+    item.addEventListener("click", clickPage);
+  });
+}
+
+function getPageButtonDom() {
+  let pageDoms = document.querySelectorAll("ul.pagination li");
+  return Array.apply(null, pageDoms);
+}
+
+function clickPage(e) {
+  let page = Number(e.target.dataset.page);
+  if (page < 1 || page > totalPage) {
+    return;
+  }
+  currentPage = Number(e.target.dataset.page);
+
+  setPagination();
+  postToSearchHouseData();
 }
