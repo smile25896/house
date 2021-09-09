@@ -66,7 +66,7 @@ function setFilterCount() {
   }
   if (
     roomList.length > 0 ||
-    document.querySelector("input[name='roomSp']").checked
+    document.querySelector("input[name='roomSp']")?.checked
   ) {
     count++;
   }

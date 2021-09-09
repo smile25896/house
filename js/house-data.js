@@ -75,7 +75,7 @@ function postToSearchHouseData() {
   let houseTypeInputDom = document.querySelectorAll("input[name='houseType']");
   houseTypeInputDom = Array.apply(null, houseTypeInputDom);
 
-  let RoomsSP = document.querySelector("input[name='roomSp']").checked
+  let RoomsSP = document.querySelector("input[name='roomSp']")?.checked
     ? "true"
     : "false";
 
