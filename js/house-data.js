@@ -129,7 +129,7 @@ function setHouseDom(data) {
   data.forEach((item) => {
     domStr += `<li class="m-list-item">
               <a
-                href="#"
+                href="javascript:void(0)"
                 class="item-img"
                 title="${item.CaseName}"
               >
