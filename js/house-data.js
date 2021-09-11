@@ -142,7 +142,7 @@ function setHouseDom(data) {
                 <a
                   href="/house/detail/${item.CaseSID}"
                   target="_blank"
-                  class="item-title ng-scope"
+                  class="item-title"
                   title="${item.CaseName}"
                 >
                   <h3>${item.CaseName}　${item.Address}</h3>

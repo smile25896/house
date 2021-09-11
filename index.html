@@ -690,11 +690,7 @@
           <div class="m-search-select-wrap dropdown-box">
             <a
               href="javascript:void(0)"
-              class="
-                search-select search-select-city
-                ng-binding
-                dropdown-toggle
-              "
+              class="search-select search-select-city dropdown-toggle"
               id="dropdownMenuButton-city"
               aria-expanded="false"
             >
@@ -791,7 +787,7 @@
                       type="checkbox"
                       class="chkbox area-chkbox"
                     />
-                    <span class="ng-binding">全區</span>
+                    <span>全區</span>
                   </label>
                 </li>
               </ul>
@@ -800,11 +796,7 @@
           <div class="m-search-select-wrap dropdown-box">
             <a
               href="javascript:void(0)"
-              class="
-                search-select search-select-price
-                ng-binding
-                dropdown-toggle
-              "
+              class="search-select search-select-price dropdown-toggle"
               id="dropdownMenuButton-price"
               aria-expanded="false"
             >
@@ -896,11 +888,7 @@
           <div class="m-search-select-wrap dropdown-box">
             <a
               href="javascript:void(0)"
-              class="
-                search-select search-select-area
-                ng-binding
-                dropdown-toggle
-              "
+              class="search-select search-select-area dropdown-toggle"
               id="dropdownMenuButton-area"
               aria-expanded="false"
             >
@@ -921,7 +909,7 @@
               >
                 <label class="inline">
                   <input
-                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    class="sp-chkbox"
                     type="radio"
                     value="0"
                     name="pyeongType-type"
@@ -931,9 +919,8 @@
                 </label>
                 <label class="inline">
                   <input
-                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    class="sp-chkbox"
                     type="radio"
-                    ng-model="searchCondition.pyeongType"
                     value="1"
                     name="pyeongType-type"
                   />
@@ -941,9 +928,8 @@
                 </label>
                 <label class="inline">
                   <input
-                    class="sp-chkbox ng-pristine ng-untouched ng-valid"
+                    class="sp-chkbox"
                     type="radio"
-                    ng-model="searchCondition.pyeongType"
                     value="2"
                     name="pyeongType-type"
                   />
@@ -959,7 +945,7 @@
                   value="unlimit"
                 /><span>坪數不限</span></label
               >
-              <label ng-repeat="i in pyeongList">
+              <label>
                 <input
                   type="checkbox"
                   index="0"
@@ -967,8 +953,8 @@
                   name="search-select-option-area"
                   value="0-20"
                 />
-                <span ng-if=" $index == 0">20 坪以下</span></label
-              ><label ng-repeat="i in pyeongList">
+                <span>20 坪以下</span></label
+              ><label>
                 <input
                   type="checkbox"
                   index="1"
@@ -977,7 +963,7 @@
                   value="20-30"
                 />
                 <span>20 坪 - 30 坪</span></label
-              ><label ng-repeat="i in pyeongList">
+              ><label>
                 <input
                   type="checkbox"
                   index="2"
@@ -1049,78 +1035,61 @@
           <div class="search-filter-block-wrap">
             <div class="col col-small">
               <div class="chkbox-wrap">
-                <!-- ngRepeat: i in advConditions.houseType.val --><label
-                  ng-repeat="i in advConditions.houseType.val"
-                >
+                <!-- ngRepeat: i in advConditions.houseType.val --><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="電梯大樓"
                     name="houseType"
                   />
-                  <span class="ng-binding">電梯大樓</span> </label
-                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                  ng-repeat="i in advConditions.houseType.val"
-                >
+                  <span>電梯大樓</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="無電梯公寓"
                     name="houseType"
                   />
-                  <span class="ng-binding">無電梯公寓</span> </label
-                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                  ng-repeat="i in advConditions.houseType.val"
-                >
+                  <span>無電梯公寓</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="透天厝"
                     name="houseType"
                   />
-                  <span class="ng-binding">透天厝</span> </label
-                ><!-- end ngRepeat: i in advConditions.houseType.val --><label
-                  ng-repeat="i in advConditions.houseType.val"
-                >
+                  <span>透天厝</span> </label
+                ><!-- end ngRepeat: i in advConditions.houseType.val --><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="別墅"
                     name="houseType"
                   />
-                  <span class="ng-binding">別墅</span> </label
+                  <span>別墅</span> </label
                 ><!-- end ngRepeat: i in advConditions.houseType.val -->
               </div>
               <div class="chkbox-wrap sp">
-                <!-- ngRepeat: i in advConditions.car.val --><label
-                  ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
-                  ng-repeat="i in advConditions.car.val"
-                >
+                <!-- ngRepeat: i in advConditions.car.val --><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="有車位"
                     name="car"
                   />
-                  <span class="ng-binding">有車位</span> </label
-                ><label
-                  ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
-                  ng-repeat="i in advConditions.car.val"
-                >
+                  <span>有車位</span> </label
+                ><label>
                   <input
                     type="checkbox"
                     class="chkbox"
                     value="無車位"
                     name="car"
                   />
-                  <span class="ng-binding">無車位</span>
+                  <span>無車位</span>
                 </label>
               </div>
             </div>
-            <div
-              class="col select-option"
-              ng-hide="searchCondition.searchFor == 'earth'"
-            >
+            <div class="col select-option">
               <label>
                 <input
                   type="checkbox"
@@ -1203,10 +1172,7 @@
                 年
               </div>
             </div>
-            <div
-              class="col select-option"
-              ng-hide="searchCondition.searchFor == 'earth'"
-            >
+            <div class="col select-option">
               <label>
                 <input
                   type="checkbox"
@@ -1223,9 +1189,7 @@
                   name="search-select-option-floor"
                   value="0-1"
                 />
-                <span ng-if="$index == 0" data-min="0" data-max="0"
-                  >低於 1 樓</span
-                ></label
+                <span>低於 1 樓</span></label
               ><label>
                 <input
                   type="checkbox"
@@ -1292,10 +1256,7 @@
                 樓
               </div>
             </div>
-            <div
-              class="col select-option"
-              ng-hide="searchCondition.searchFor == 'parking' || searchCondition.searchFor == 'earth'"
-            >
+            <div class="col select-option">
               <label
                 ><input
                   type="checkbox"
@@ -1306,7 +1267,7 @@
                   value="unlimit"
                 /><span> 房數不限</span></label
               >
-              <label ng-repeat="i in advConditions.rooms.val">
+              <label>
                 <input
                   type="checkbox"
                   index="0"
@@ -1316,7 +1277,7 @@
                   value="1-1"
                 />
                 <span> 1 房</span></label
-              ><label ng-repeat="i in advConditions.rooms.val">
+              ><label>
                 <input
                   type="checkbox"
                   index="2-2"
@@ -1346,7 +1307,7 @@
                   value="4-4"
                 />
                 <span> 4 房</span></label
-              ><label ng-repeat="i in advConditions.rooms.val">
+              ><label>
                 <input
                   type="checkbox"
                   index="4"
@@ -1356,7 +1317,7 @@
                   value="5-max"
                 />
                 <span> 5 房以上</span> </label
-              ><label ng-repeat="i in advConditions.rooms.val">
+              ><label>
                 <input
                   type="checkbox"
                   index="5"
@@ -1451,142 +1412,47 @@
         <ul class="l-item-list"></ul>
         <div class="m-pagination" style="display: block">
           <ul
-            class="pagination ng-isolate-scope ng-valid"
+            class="pagination"
             first-text="|<"
             last-text=">|"
             previous-text="<"
             next-text=">"
           >
-            <li class="pagination-prev ng-scope disabled">
+            <li class="pagination-prev disabled">
               <a href="javascript:void(0)">&lt;</a>
             </li>
-            <li class="pagination-page ng-scope active">
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >1</a
-              >
+            <li class="pagination-page active">
+              <a href="">1</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >2</a
-              >
+            <li class="pagination-page">
+              <a href="">2</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >3</a
-              >
+            <li class="pagination-page">
+              <a href="">3</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >4</a
-              >
+            <li class="pagination-page">
+              <a href="">4</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >5</a
-              >
+            <li class="pagination-page">
+              <a href="">5</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >6</a
-              >
+            <li class="pagination-page">
+              <a href="">6</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >7</a
-              >
+            <li class="pagination-page">
+              <a href="">7</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >8</a
-              >
+            <li class="pagination-page">
+              <a href="">8</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >9</a
-              >
+            <li class="pagination-page">
+              <a href="">9</a>
             </li>
-            <li
-              ng-repeat="page in pages track by $index"
-              ng-class="{active: page.active,disabled: ngDisabled&amp;&amp;!page.active}"
-              class="pagination-page ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page.number, $event)"
-                class="ng-binding"
-                >10</a
-              >
+            <li class="pagination-page">
+              <a href="">10</a>
             </li>
-            <li
-              ng-if="::directionLinks"
-              ng-class="{disabled: noNext()||ngDisabled}"
-              class="pagination-next ng-scope"
-            >
-              <a
-                href=""
-                ng-click="selectPage(page + 1, $event)"
-                class="ng-binding"
-                >&gt;</a
-              >
+            <li class="pagination-next">
+              <a href="">&gt;</a>
             </li>
           </ul>
         </div>

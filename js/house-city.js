@@ -488,7 +488,7 @@ function setTownDown(city) {
           type="checkbox"
           class="chkbox area-chkbox"
         />
-        <span class="ng-binding">${town}</span>
+        <span>${town}</span>
       </label>
     </li>`;
   });
