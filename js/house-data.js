@@ -5,7 +5,7 @@ $(document).ready(function () {
 });
 
 let totalPage = 0;
-let currentPage = 20;
+let currentPage = 1;
 
 function setSearchButtonDom() {
   document
