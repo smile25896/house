@@ -688,354 +688,349 @@
         <div class="m-search-field">
           <div class="m-search-field-inner">
             <!-- 縣市/鄉鎮市區 -->
-            <div class="option-select-box">
-              <div class="m-search-select-wrap dropdown-box">
-                <a
-                  href="javascript:void(0)"
-                  class="search-select search-select-city dropdown-toggle"
-                  id="dropdownMenuButton-city"
-                  aria-expanded="false"
+            <div class="m-search-select-wrap dropdown-box">
+              <a
+                href="javascript:void(0)"
+                class="search-select search-select-city dropdown-toggle"
+                id="dropdownMenuButton-city"
+                aria-expanded="false"
+              >
+                區域不限
+              </a>
+              <div
+                class="search-select-option-cities select-option dropdown-menu"
+                aria-labelledby="dropdownMenuButton-city"
+              >
+                <!-- <a href="" class="close">×</a> -->
+                <ul class="ul-city">
+                  <!-- 縣市 -->
+                  <li>
+                    <span>台北市</span>
+                  </li>
+                  <li>
+                    <span>新北市</span>
+                  </li>
+                  <li>
+                    <span>基隆市</span>
+                  </li>
+                  <li>
+                    <span>連江縣</span>
+                  </li>
+                  <li>
+                    <span>宜蘭縣</span>
+                  </li>
+                  <li>
+                    <span>新竹市</span>
+                  </li>
+                  <li>
+                    <span>新竹縣</span>
+                  </li>
+                  <li>
+                    <span>桃園市</span>
+                  </li>
+                  <li>
+                    <span>苗栗縣</span>
+                  </li>
+                  <li>
+                    <span>台中市</span>
+                  </li>
+                  <li>
+                    <span>彰化縣</span>
+                  </li>
+                  <li>
+                    <span>南投縣</span>
+                  </li>
+                  <li>
+                    <span>嘉義市</span>
+                  </li>
+                  <li>
+                    <span>嘉義縣</span>
+                  </li>
+                  <li>
+                    <span>雲林縣</span>
+                  </li>
+                  <li>
+                    <span>台南市</span>
+                  </li>
+                  <li>
+                    <span>高雄市</span>
+                  </li>
+                  <li>
+                    <span>澎湖縣</span>
+                  </li>
+                  <li>
+                    <span>金門縣</span>
+                  </li>
+                  <li>
+                    <span>屏東縣</span>
+                  </li>
+                  <li>
+                    <span>台東縣</span>
+                  </li>
+                  <li>
+                    <span>花蓮縣</span>
+                  </li>
+                  <li>
+                    <span class="cities-all">區域不限</span>
+                  </li>
+                </ul>
+                <ul class="ul-town hidden">
+                  <!-- 鄉鎮區域 -->
+                  <li class="reset go-back-city">
+                    <span><i class="fa fa-reply"></i></span>
+                  </li>
+                  <!-- ngRepeat: a in areaList -->
+                  <li>
+                    <label>
+                      <input
+                        area="全區"
+                        index="0"
+                        type="checkbox"
+                        class="chkbox area-chkbox"
+                      />
+                      <span>全區</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="m-search-select-wrap dropdown-box">
+              <a
+                href="javascript:void(0)"
+                class="search-select search-select-price dropdown-toggle"
+                id="dropdownMenuButton-price"
+                aria-expanded="false"
+              >
+                總價不限
+              </a>
+              <div
+                class="search-select-option-price select-option dropdown-menu"
+                aria-labelledby="dropdownMenuButton-price"
+              >
+                <label>
+                  <input
+                    type="checkbox"
+                    index="-1"
+                    class="chkbox chkbox-any"
+                    name="search-select-option-price"
+                    value="unlimit"
+                  /><span>總價不限</span>
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    index="0"
+                    listtype="priceList"
+                    class="chkbox"
+                    name="search-select-option-price"
+                    value="0-300"
+                  />
+                  <span>300 萬以下</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="1"
+                    listtype="priceList"
+                    class="chkbox"
+                    name="search-select-option-price"
+                    value="300-600"
+                  />
+                  <span>300 萬 - 600 萬</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="2"
+                    listtype="priceList"
+                    class="chkbox"
+                    name="search-select-option-price"
+                    value="600-900"
+                  /><span>600 萬 - 900 萬</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="3"
+                    listtype="priceList"
+                    class="chkbox"
+                    name="search-select-option-price"
+                    value="900-1200"
+                  /><span>900 萬 - 1200 萬</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="4"
+                    listtype="priceList"
+                    class="chkbox"
+                    name="search-select-option-price"
+                    value="1200-max"
+                  /><span>1200 萬以上</span></label
                 >
-                  區域不限
-                </a>
-                <div
-                  class="search-select-option-cities select-option dropdown-menu"
-                  aria-labelledby="dropdownMenuButton-city"
-                >
-                  <!-- <a href="" class="close">×</a> -->
-                  <ul class="ul-city">
-                    <!-- 縣市 -->
-                    <li>
-                      <span>台北市</span>
-                    </li>
-                    <li>
-                      <span>新北市</span>
-                    </li>
-                    <li>
-                      <span>基隆市</span>
-                    </li>
-                    <li>
-                      <span>連江縣</span>
-                    </li>
-                    <li>
-                      <span>宜蘭縣</span>
-                    </li>
-                    <li>
-                      <span>新竹市</span>
-                    </li>
-                    <li>
-                      <span>新竹縣</span>
-                    </li>
-                    <li>
-                      <span>桃園市</span>
-                    </li>
-                    <li>
-                      <span>苗栗縣</span>
-                    </li>
-                    <li>
-                      <span>台中市</span>
-                    </li>
-                    <li>
-                      <span>彰化縣</span>
-                    </li>
-                    <li>
-                      <span>南投縣</span>
-                    </li>
-                    <li>
-                      <span>嘉義市</span>
-                    </li>
-                    <li>
-                      <span>嘉義縣</span>
-                    </li>
-                    <li>
-                      <span>雲林縣</span>
-                    </li>
-                    <li>
-                      <span>台南市</span>
-                    </li>
-                    <li>
-                      <span>高雄市</span>
-                    </li>
-                    <li>
-                      <span>澎湖縣</span>
-                    </li>
-                    <li>
-                      <span>金門縣</span>
-                    </li>
-                    <li>
-                      <span>屏東縣</span>
-                    </li>
-                    <li>
-                      <span>台東縣</span>
-                    </li>
-                    <li>
-                      <span>花蓮縣</span>
-                    </li>
-                    <li>
-                      <span class="cities-all">區域不限</span>
-                    </li>
-                  </ul>
-                  <ul class="ul-town hidden">
-                    <!-- 鄉鎮區域 -->
-                    <li class="reset go-back-city">
-                      <span><i class="fa fa-reply"></i></span>
-                    </li>
-                    <!-- ngRepeat: a in areaList -->
-                    <li>
-                      <label>
-                        <input
-                          area="全區"
-                          index="0"
-                          type="checkbox"
-                          class="chkbox area-chkbox"
-                        />
-                        <span>全區</span>
-                      </label>
-                    </li>
-                  </ul>
+                <div class="custom-block">
+                  <div class="input-wrap">
+                    <input
+                      index="0"
+                      name="price1"
+                      class="custom-num num"
+                      type="text"
+                      size="5"
+                    />
+                    -
+                    <input
+                      index="1"
+                      name="price2"
+                      class="custom-num num"
+                      type="text"
+                      size="5"
+                    />
+                    萬
+                  </div>
                 </div>
               </div>
-              <div class="m-search-select-wrap dropdown-box">
-                <a
-                  href="javascript:void(0)"
-                  class="search-select search-select-price dropdown-toggle"
-                  id="dropdownMenuButton-price"
-                  aria-expanded="false"
-                >
-                  總價不限
-                </a>
+            </div>
+            <div class="m-search-select-wrap dropdown-box">
+              <a
+                href="javascript:void(0)"
+                class="search-select search-select-area dropdown-toggle"
+                id="dropdownMenuButton-area"
+                aria-expanded="false"
+              >
+                坪數不限
+              </a>
+              <div
+                class="search-select-option-area select-option dropdown-menu"
+                aria-labelledby="dropdownMenuButton-area"
+              >
                 <div
-                  class="search-select-option-price select-option dropdown-menu"
-                  aria-labelledby="dropdownMenuButton-price"
+                  style="
+                    height: 40px;
+                    line-height: 40px;
+                    padding-left: 0.7em;
+                    margin-bottom: 0.2em;
+                    border-bottom: 1px solid #eee;
+                  "
                 >
-                  <label>
+                  <label class="inline">
                     <input
-                      type="checkbox"
-                      index="-1"
-                      class="chkbox chkbox-any"
-                      name="search-select-option-price"
-                      value="unlimit"
-                    /><span>總價不限</span>
+                      class="sp-chkbox"
+                      type="radio"
+                      value="0"
+                      name="pyeongType-type"
+                      checked
+                    />
+                    <span>建物</span>
                   </label>
-                  <label>
+                  <label class="inline">
                     <input
-                      type="checkbox"
-                      index="0"
-                      listtype="priceList"
-                      class="chkbox"
-                      name="search-select-option-price"
-                      value="0-300"
+                      class="sp-chkbox"
+                      type="radio"
+                      value="1"
+                      name="pyeongType-type"
                     />
-                    <span>300 萬以下</span></label
-                  ><label>
+                    <span>土地</span>
+                  </label>
+                  <label class="inline">
                     <input
-                      type="checkbox"
-                      index="1"
-                      listtype="priceList"
-                      class="chkbox"
-                      name="search-select-option-price"
-                      value="300-600"
+                      class="sp-chkbox"
+                      type="radio"
+                      value="2"
+                      name="pyeongType-type"
                     />
-                    <span>300 萬 - 600 萬</span></label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="2"
-                      listtype="priceList"
-                      class="chkbox"
-                      name="search-select-option-price"
-                      value="600-900"
-                    /><span>600 萬 - 900 萬</span></label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="3"
-                      listtype="priceList"
-                      class="chkbox"
-                      name="search-select-option-price"
-                      value="900-1200"
-                    /><span>900 萬 - 1200 萬</span></label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="4"
-                      listtype="priceList"
-                      class="chkbox"
-                      name="search-select-option-price"
-                      value="1200-max"
-                    /><span>1200 萬以上</span></label
-                  >
-                  <div class="custom-block">
-                    <div class="input-wrap">
-                      <input
-                        index="0"
-                        name="price1"
-                        class="custom-num num"
-                        type="text"
-                        size="5"
-                      />
-                      -
-                      <input
-                        index="1"
-                        name="price2"
-                        class="custom-num num"
-                        type="text"
-                        size="5"
-                      />
-                      萬
-                    </div>
-                  </div>
+                    <span>主+陽</span>
+                  </label>
                 </div>
-              </div>
-              <div class="m-search-select-wrap dropdown-box">
-                <a
-                  href="javascript:void(0)"
-                  class="search-select search-select-area dropdown-toggle"
-                  id="dropdownMenuButton-area"
-                  aria-expanded="false"
+                <label
+                  ><input
+                    type="checkbox"
+                    index="-1"
+                    class="chkbox chkbox-any"
+                    name="search-select-option-area"
+                    value="unlimit"
+                  /><span>坪數不限</span></label
                 >
-                  坪數不限
-                </a>
-                <div
-                  class="search-select-option-area select-option dropdown-menu"
-                  aria-labelledby="dropdownMenuButton-area"
+                <label>
+                  <input
+                    type="checkbox"
+                    index="0"
+                    class="chkbox"
+                    name="search-select-option-area"
+                    value="0-20"
+                  />
+                  <span>20 坪以下</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="1"
+                    class="chkbox"
+                    name="search-select-option-area"
+                    value="20-30"
+                  />
+                  <span>20 坪 - 30 坪</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="2"
+                    class="chkbox"
+                    name="search-select-option-area"
+                    value="30-40"
+                  /><span>30 坪 - 40 坪</span> </label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="3"
+                    class="chkbox"
+                    name="search-select-option-area"
+                    value="40-50"
+                  />
+                  <span>40 坪 - 50 坪</span></label
+                ><label>
+                  <input
+                    type="checkbox"
+                    index="4"
+                    class="chkbox"
+                    name="search-select-option-area"
+                    value="50-max"
+                  />
+                  <span>50 坪以上</span></label
                 >
-                  <div
-                    style="
-                      height: 40px;
-                      line-height: 40px;
-                      padding-left: 0.7em;
-                      margin-bottom: 0.2em;
-                      border-bottom: 1px solid #eee;
-                    "
-                  >
-                    <label class="inline">
-                      <input
-                        class="sp-chkbox"
-                        type="radio"
-                        value="0"
-                        name="pyeongType-type"
-                        checked
-                      />
-                      <span>建物</span>
-                    </label>
-                    <label class="inline">
-                      <input
-                        class="sp-chkbox"
-                        type="radio"
-                        value="1"
-                        name="pyeongType-type"
-                      />
-                      <span>土地</span>
-                    </label>
-                    <label class="inline">
-                      <input
-                        class="sp-chkbox"
-                        type="radio"
-                        value="2"
-                        name="pyeongType-type"
-                      />
-                      <span>主+陽</span>
-                    </label>
-                  </div>
-                  <label
-                    ><input
-                      type="checkbox"
-                      index="-1"
-                      class="chkbox chkbox-any"
-                      name="search-select-option-area"
-                      value="unlimit"
-                    /><span>坪數不限</span></label
-                  >
-                  <label>
+                <div class="custom-block">
+                  <div class="input-wrap">
                     <input
-                      type="checkbox"
                       index="0"
-                      class="chkbox"
-                      name="search-select-option-area"
-                      value="0-20"
+                      class="custom-num num"
+                      type="text"
+                      size="3"
+                      name="area1"
                     />
-                    <span>20 坪以下</span></label
-                  ><label>
+                    -
                     <input
-                      type="checkbox"
                       index="1"
-                      class="chkbox"
-                      name="search-select-option-area"
-                      value="20-30"
+                      class="custom-num num"
+                      type="text"
+                      size="3"
+                      name="area2"
                     />
-                    <span>20 坪 - 30 坪</span></label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="2"
-                      class="chkbox"
-                      name="search-select-option-area"
-                      value="30-40"
-                    /><span>30 坪 - 40 坪</span> </label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="3"
-                      class="chkbox"
-                      name="search-select-option-area"
-                      value="40-50"
-                    />
-                    <span>40 坪 - 50 坪</span></label
-                  ><label>
-                    <input
-                      type="checkbox"
-                      index="4"
-                      class="chkbox"
-                      name="search-select-option-area"
-                      value="50-max"
-                    />
-                    <span>50 坪以上</span></label
-                  >
-                  <div class="custom-block">
-                    <div class="input-wrap">
-                      <input
-                        index="0"
-                        class="custom-num num"
-                        type="text"
-                        size="3"
-                        name="area1"
-                      />
-                      -
-                      <input
-                        index="1"
-                        class="custom-num num"
-                        type="text"
-                        size="3"
-                        name="area2"
-                      />
-                      坪
-                    </div>
+                    坪
                   </div>
                 </div>
               </div>
             </div>
-            <div class="search-box">
-              <input
-                type="text"
-                class="search-text-keywords"
-                name="search-text-keywords"
-                placeholder="編號、關鍵字、街道、大樓或學校"
-              /><button
-                class="search-text-query"
-                ga-buy-search=""
-                ga_action="buy_search_%%_keyword_click"
-                ga_label="buy_search_%%_keyword_btn"
-                ga_cat="buy_search"
-              >
-                <i class="fa fa-search fa-lg"></i>
-              </button>
-              <a href="javascript:void(0)" class="search-more-fliter-switcher"
-                >更多篩選(<span class="filter-count">0</span>)</a
-              >
-              <a href="javascript:void(0)" class="search-submit-btn">找房子</a>
-            </div>
-
+            <input
+              type="text"
+              class="search-text-keywords"
+              name="search-text-keywords"
+              placeholder="編號、關鍵字、街道、大樓或學校"
+            /><button
+              class="search-text-query"
+              ga-buy-search=""
+              ga_action="buy_search_%%_keyword_click"
+              ga_label="buy_search_%%_keyword_btn"
+              ga_cat="buy_search"
+            >
+              <i class="fa fa-search fa-lg"></i>
+            </button>
+            <a href="javascript:void(0)" class="search-more-fliter-switcher"
+              >更多篩選(<span class="filter-count">0</span>)</a
+            >
+            <a href="javascript:void(0)" class="search-submit-btn">找房子</a>
           </div>
         </div>
         <div class="m-search-more-filter-block">
