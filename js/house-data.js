@@ -26,15 +26,9 @@ function getRangeData(array, type = "string") {
   }
   if (array[0] !== undefined) {
     if (type === "string") {
-      if (array[0] !== "0") {
-        range += array[0];
-      }
+      range += array[0];
     } else {
-      if (array[0] !== "0") {
-        range.push(array[0]);
-      } else {
-        range.push("");
-      }
+      range.push(array[0]);
     }
   }
   if (type === "string") {
@@ -45,11 +39,7 @@ function getRangeData(array, type = "string") {
     if (type === "string") {
       range += array[length - 1];
     } else {
-      if (array[length - 1] !== "max") {
-        range.push(array[length - 1]);
-      } else {
-        range.push("");
-      }
+      range.push(array[length - 1]);
     }
   }
   if (range === ",") return "";
