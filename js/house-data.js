@@ -87,7 +87,6 @@ function postToSearchHouseData() {
     PyeongType,
     SearchFor: getSearchFor(),
     Page: currentPage,
-    Filiter: "",
     Keywords,
     HouseType,
     HouseAge,

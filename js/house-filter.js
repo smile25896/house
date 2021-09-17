@@ -18,7 +18,9 @@ function setClickFilterEvent() {
 }
 
 function handleClickChangeFilter(e) {
-  listFilter = e.target.dataset.filter;
+  let target = e.target.parentElement;
+  listFilter = target.dataset.filter;
+  console.log(listFilter);
   postToSearchHouseData();
 
   let filters = getFilter();
@@ -26,5 +28,5 @@ function handleClickChangeFilter(e) {
     item.classList.remove("active");
   });
 
-  e.target.parentElement.classList.add("active");
+  target.classList.add("active");
 }
