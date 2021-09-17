@@ -96,6 +96,8 @@ function postToSearchHouseData() {
     Floors,
     Car,
     Top,
+    Sort: listSort,
+    Filter: listFilter,
   };
 
   fetch("http://localhost:5500/tmpData/data.json", {
