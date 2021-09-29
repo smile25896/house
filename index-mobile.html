@@ -676,6 +676,649 @@
         ><span>台北市全區</span><i class="m-icon is-search"></i
       ></a>
     </div>
+    <div class="m-search">
+      <div class="m-search-tit">
+        <p>買屋搜尋</p>
+        <i class="close"></i>
+      </div>
+      <div class="m-search-cont">
+        <div class="m-select" data-name="searchMode">
+          <p>
+            <span class="tit">搜尋方式</span><span class="cont">區域找</span>
+          </p>
+          <div class="item">
+            <ul>
+              <li data-idx="0" data-sarch-mode="region">區域找<i></i></li>
+              <li
+                ga_cat="buy_search_m"
+                ga_event="buy_search_m_how_click"
+                ga_label="buy_search_m_how_mrt"
+                class="ga_click_trace"
+                data-idx="1"
+                data-sarch-mode="num"
+              >
+                物件編號找<i></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="b-select-block">
+          <div class="m-select" data-name="district" style="display: none">
+            <p><span class="tit">台北市</span></p>
+            <div class="item">
+              <ul class="col">
+                <li data-idx="0" class="is-active">台北市<i></i></li>
+                <li data-idx="1">新北市<i></i></li>
+                <li data-idx="2">基隆市<i></i></li>
+                <li data-idx="3">連江縣<i></i></li>
+                <li data-idx="4">宜蘭縣<i></i></li>
+                <li data-idx="5">釣魚台<i></i></li>
+                <li data-idx="6">新竹市<i></i></li>
+                <li data-idx="7">新竹縣<i></i></li>
+                <li data-idx="8">桃園市<i></i></li>
+                <li data-idx="9">苗栗縣<i></i></li>
+                <li data-idx="10">台中市<i></i></li>
+                <li data-idx="11">彰化縣<i></i></li>
+                <li data-idx="12">南投縣<i></i></li>
+                <li data-idx="13">嘉義市<i></i></li>
+                <li data-idx="14">嘉義縣<i></i></li>
+                <li data-idx="15">雲林縣<i></i></li>
+                <li data-idx="16">台南市<i></i></li>
+                <li data-idx="17">高雄市<i></i></li>
+                <li data-idx="18">南海島<i></i></li>
+                <li data-idx="19">澎湖縣<i></i></li>
+                <li data-idx="20">金門縣<i></i></li>
+                <li data-idx="21">屏東縣<i></i></li>
+                <li data-idx="22">台東縣<i></i></li>
+                <li data-idx="23">花蓮縣<i></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="m-select" data-name="zone">
+            <p class=""><span class="tit">台北市全區</span></p>
+            <div class="item">
+              <ul>
+                <li class="city is-active">
+                  台北市<i class="close">切換縣市</i>
+                </li>
+                <li class="all is-active">全區<i></i></li>
+              </ul>
+              <ul class="col">
+                <li data-idx="0">中正區<i></i></li>
+                <li data-idx="1">大同區<i></i></li>
+                <li data-idx="2">中山區<i></i></li>
+                <li data-idx="3">松山區<i></i></li>
+                <li data-idx="4">大安區<i></i></li>
+                <li data-idx="5">萬華區<i></i></li>
+                <li data-idx="6">信義區<i></i></li>
+                <li data-idx="7">士林區<i></i></li>
+                <li data-idx="8">北投區<i></i></li>
+                <li data-idx="9">內湖區<i></i></li>
+                <li data-idx="10">南港區<i></i></li>
+                <li data-idx="11">文山區<i></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="m-select" data-name="price">
+            <p><span class="tit">價格</span><span class="cont">不限</span></p>
+            <div class="item">
+              <div class="range">
+                <input data-idx="0" type="tel" placeholder="不限" value="" />
+                -
+                <input data-idx="1" type="tel" placeholder="不限" value="" />
+                萬
+              </div>
+            </div>
+          </div>
+          <div class="m-select" data-name="houseType">
+            <p>
+              <span class="tit">房屋型態</span><span class="cont">不限</span>
+            </p>
+            <div class="item">
+              <ul>
+                <li
+                  ga_cat="buy_search_m"
+                  ga_event="buy_search_m_type_click"
+                  ga_label="buy_search_m_none"
+                  class="all ga_click_trace is-active"
+                >
+                  不限<i></i>
+                </li>
+                <li
+                  ga_cat="buy_search_m"
+                  ga_event="buy_search_m_type_click"
+                  ga_label="buy_search_m_building"
+                  class="ga_click_trace"
+                  data-idx="0"
+                >
+                  電梯大廈<i></i>
+                </li>
+                <li
+                  ga_cat="buy_search_m"
+                  ga_event="buy_search_m_type_click"
+                  ga_label="buy_search_m_apart"
+                  class="ga_click_trace"
+                  data-idx="1"
+                >
+                  無電梯公寓<i></i>
+                </li>
+                <li
+                  ga_cat="buy_search_m"
+                  ga_event="buy_search_m_type_click"
+                  ga_label="buy_search_m_villa"
+                  class="ga_click_trace"
+                  data-idx="2"
+                >
+                  別墅<i></i>
+                </li>
+                <li
+                  ga_cat="buy_search_m"
+                  ga_event="buy_search_m_type_click"
+                  ga_label="buy_search_m_townhouse"
+                  class="ga_click_trace"
+                  data-idx="3"
+                >
+                  透天<i></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="m-select" data-name="houseRoom">
+            <p><span class="tit">房數</span><span class="cont">不限</span></p>
+            <div class="item">
+              <div class="range">
+                <input data-idx="0" type="tel" placeholder="不限" value="" />
+                -
+                <input data-idx="1" type="tel" placeholder="不限" value="" />
+                房
+                <div class="checkbox">
+                  <input
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_room_click"
+                    ga_label="buy_search_m_room_plus"
+                    class="ga_click_trace"
+                    data-val="p"
+                    id="checkhouseRoom0"
+                    type="checkbox"
+                  /><label for="checkhouseRoom0">含加蓋</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="m-select" data-name="ping">
+            <p>
+              <span class="tit">坪數</span><span class="cont">建物 不限</span>
+            </p>
+            <div class="item">
+              <ul></ul>
+              <ul class="col">
+                <li data-idx="0" class="is-active">建物<i></i></li>
+                <li data-idx="1">主+陽<i></i></li>
+                <li data-idx="2">土地<i></i></li>
+              </ul>
+              <div class="range">
+                <input
+                  data-idx="0"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />-<input
+                  data-idx="1"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />坪
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search" data-name="keyword">
+          <input
+            type="search"
+            placeholder="請輸入搜尋關鍵字、編號、街道或大樓"
+            value=""
+          />
+        </div>
+        <div class="b-fold-block actfold off more-filter-block">
+          <div class="m-fold-block">
+            <div class="m-type" data-name="purpose">
+              <p><span class="tit">用途</span><span class="cont">不限</span></p>
+              <div class="item is-active">
+                <ul>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_all"
+                    class="all ga_click_trace is-active"
+                  >
+                    不限<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_house"
+                    class="ga_click_trace"
+                    data-idx="0"
+                  >
+                    住宅<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_store"
+                    class="ga_click_trace"
+                    data-idx="1"
+                  >
+                    店面<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_office"
+                    class="ga_click_trace"
+                    data-idx="2"
+                  >
+                    辦公<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_factory"
+                    class="ga_click_trace"
+                    data-idx="3"
+                  >
+                    廠房<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_park"
+                    class="ga_click_trace"
+                    data-idx="4"
+                  >
+                    車位<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_land"
+                    class="ga_click_trace"
+                    data-idx="5"
+                  >
+                    土地<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_use_click"
+                    ga_label="buy_search_m_use_other"
+                    class="ga_click_trace"
+                    data-idx="6"
+                  >
+                    其他<i></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="m-type" data-name="houseYear">
+              <p><span class="tit">屋齡</span><span class="cont">不限</span></p>
+              <div class="item">
+                <div class="range">
+                  <input data-idx="0" type="tel" placeholder="不限" value="" />
+                  -
+                  <input data-idx="1" type="tel" placeholder="不限" value="" />
+                  年
+                  <div class="checkbox">
+                    <input
+                      ga_cat="buy_search_m"
+                      ga_event="buy_search_m_age_click"
+                      ga_label="buy_search_m_age_0"
+                      class="ga_click_trace"
+                      data-val="0"
+                      id="checkhouseYear0"
+                      type="checkbox"
+                    /><label for="checkhouseYear0">預售屋</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-type" data-name="houseFloor">
+              <p><span class="tit">樓層</span><span class="cont">不限</span></p>
+              <div class="item">
+                <div class="range">
+                  <input data-idx="0" type="tel" placeholder="不限" value="" />
+                  -
+                  <input data-idx="1" type="tel" placeholder="不限" value="" />
+                  樓
+                  <div class="checkbox">
+                    <input
+                      ga_cat="buy_search_m"
+                      ga_event="buy_search_m_floor_click"
+                      ga_label="buy_search_m_floor_under1"
+                      class="ga_click_trace"
+                      data-val="0"
+                      id="checkhouseFloor0"
+                      type="checkbox"
+                    /><label for="checkhouseFloor0">低於一樓</label>
+                  </div>
+                  <div class="checkbox">
+                    <input
+                      ga_cat="buy_search_m"
+                      ga_event="buy_search_m_floor_click"
+                      ga_label="buy_search_m_floor_top"
+                      class="ga_click_trace"
+                      data-val="p"
+                      id="checkhouseFloor1"
+                      type="checkbox"
+                    /><label for="checkhouseFloor1">限頂樓</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-type" data-name="parkingType">
+              <p>
+                <span class="tit">車位</span><span class="cont">種類不限</span>
+              </p>
+              <div class="item">
+                <ul>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_yes"
+                    class="all ga_click_trace is-active"
+                  >
+                    種類不限<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_rampA"
+                    class="ga_click_trace"
+                    data-idx="0"
+                  >
+                    坡道平面<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_rampB"
+                    class="ga_click_trace"
+                    data-idx="1"
+                  >
+                    坡道機械<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_liftA"
+                    class="ga_click_trace"
+                    data-idx="2"
+                  >
+                    昇降平面<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_liftB"
+                    class="ga_click_trace"
+                    data-idx="3"
+                  >
+                    昇降機械<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_park_click"
+                    ga_label="buy_search_m_park_yard"
+                    class="ga_click_trace"
+                    data-idx="4"
+                  >
+                    庭院<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="[object Object]"
+                    ga_label="[object Object]"
+                    class="none ga_click_trace"
+                  >
+                    無<i></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="m-type" data-name="position">
+              <p><span class="tit">朝向</span><span class="cont">不限</span></p>
+              <div class="item">
+                <ul>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_不限"
+                    class="all ga_click_trace is-active"
+                  >
+                    不限<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_東"
+                    class="ga_click_trace"
+                    data-idx="0"
+                  >
+                    東<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_南"
+                    class="ga_click_trace"
+                    data-idx="1"
+                  >
+                    南<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_西"
+                    class="ga_click_trace"
+                    data-idx="2"
+                  >
+                    西<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_北"
+                    class="ga_click_trace"
+                    data-idx="3"
+                  >
+                    北<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_東北"
+                    class="ga_click_trace"
+                    data-idx="4"
+                  >
+                    東北<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_東南"
+                    class="ga_click_trace"
+                    data-idx="5"
+                  >
+                    東南<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_西北"
+                    class="ga_click_trace"
+                    data-idx="6"
+                  >
+                    西北<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_toward_click"
+                    ga_label="buy_search_m_toward_西南"
+                    class="ga_click_trace"
+                    data-idx="7"
+                  >
+                    西南<i></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="m-type" data-name="around">
+              <p>
+                <span class="tit">周遭環境</span><span class="cont">不限</span>
+              </p>
+              <div class="item">
+                <ul>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_不限"
+                    class="all ga_click_trace is-active"
+                  >
+                    不限<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_低公設"
+                    class="ga_click_trace"
+                    data-idx="0"
+                  >
+                    低公設<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近公園"
+                    class="ga_click_trace"
+                    data-idx="1"
+                  >
+                    近公園<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近捷運"
+                    class="ga_click_trace"
+                    data-idx="2"
+                  >
+                    近捷運<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近自行車站"
+                    class="ga_click_trace"
+                    data-idx="3"
+                  >
+                    近自行車站<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近市場"
+                    class="ga_click_trace"
+                    data-idx="4"
+                  >
+                    近市場<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近學校"
+                    class="ga_click_trace"
+                    data-idx="5"
+                  >
+                    近學校<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_近醫療機構"
+                    class="ga_click_trace"
+                    data-idx="6"
+                  >
+                    近醫療機構<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_search_m_sp_click"
+                    ga_label="buy_search_m_sp_無障礙空間"
+                    class="ga_click_trace"
+                    data-idx="7"
+                  >
+                    無障礙空間<i></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="m-type" data-name="featured">
+              <p>
+                <span class="tit">特色房屋</span><span class="cont">不限</span>
+              </p>
+              <div class="item">
+                <ul>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_filter_m_tag_click"
+                    ga_label="buy_filter_m_tag_不限"
+                    class="all ga_click_trace is-active"
+                  >
+                    不限<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_filter_m_tag_click"
+                    ga_label="buy_filter_m_tag_vr"
+                    class="ga_click_trace"
+                    data-idx="0"
+                  >
+                    實境找房<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_filter_m_tag_click"
+                    ga_label="buy_filter_m_tag_new"
+                    class="ga_click_trace"
+                    data-idx="1"
+                  >
+                    新上架<i></i>
+                  </li>
+                  <li
+                    ga_cat="buy_search_m"
+                    ga_event="buy_filter_m_tag_click"
+                    ga_label="buy_filter_m_tag_reduction"
+                    class="ga_click_trace"
+                    data-idx="2"
+                  >
+                    降價<i></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="b-fold-txt more-filter">+更多條件</a>
+        </div>
+        <div class="m-submit">
+          <a
+            href="javascript:;"
+            ga_cat="buy_search_m"
+            ga_event="buy_search_m_click"
+            ga_label="buy_search_m_btn"
+            class="button ga_click_trace"
+            >開始搜尋</a
+          >
+        </div>
+      </div>
+    </div>
     <div class="m-list-buy">
       <ul>
         <li class="m-house brand-ut">
@@ -1123,649 +1766,6 @@
           >
         </li>
       </ul>
-    </div>
-    <div class="m-search">
-      <div class="m-search-tit">
-        <p>買屋搜尋</p>
-        <i class="close"></i>
-      </div>
-      <div class="m-search-cont">
-        <div class="m-select" data-name="searchMode">
-          <p>
-            <span class="tit">搜尋方式</span><span class="cont">區域找</span>
-          </p>
-          <div class="item">
-            <ul>
-              <li data-idx="0" data-sarch-mode="region">區域找<i></i></li>
-              <li
-                ga_cat="buy_search_m"
-                ga_event="buy_search_m_how_click"
-                ga_label="buy_search_m_how_mrt"
-                class="ga_click_trace"
-                data-idx="1"
-                data-sarch-mode="num"
-              >
-                物件編號找<i></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="b-select-block">
-          <div class="m-select" data-name="district" style="display: none">
-            <p><span class="tit">台北市</span></p>
-            <div class="item">
-              <ul class="col">
-                <li data-idx="0" class="is-active">台北市<i></i></li>
-                <li data-idx="1">新北市<i></i></li>
-                <li data-idx="2">基隆市<i></i></li>
-                <li data-idx="3">連江縣<i></i></li>
-                <li data-idx="4">宜蘭縣<i></i></li>
-                <li data-idx="5">釣魚台<i></i></li>
-                <li data-idx="6">新竹市<i></i></li>
-                <li data-idx="7">新竹縣<i></i></li>
-                <li data-idx="8">桃園市<i></i></li>
-                <li data-idx="9">苗栗縣<i></i></li>
-                <li data-idx="10">台中市<i></i></li>
-                <li data-idx="11">彰化縣<i></i></li>
-                <li data-idx="12">南投縣<i></i></li>
-                <li data-idx="13">嘉義市<i></i></li>
-                <li data-idx="14">嘉義縣<i></i></li>
-                <li data-idx="15">雲林縣<i></i></li>
-                <li data-idx="16">台南市<i></i></li>
-                <li data-idx="17">高雄市<i></i></li>
-                <li data-idx="18">南海島<i></i></li>
-                <li data-idx="19">澎湖縣<i></i></li>
-                <li data-idx="20">金門縣<i></i></li>
-                <li data-idx="21">屏東縣<i></i></li>
-                <li data-idx="22">台東縣<i></i></li>
-                <li data-idx="23">花蓮縣<i></i></li>
-              </ul>
-            </div>
-          </div>
-          <div class="m-select" data-name="zone">
-            <p class=""><span class="tit">台北市全區</span></p>
-            <div class="item">
-              <ul>
-                <li class="city is-active">
-                  台北市<i class="close">切換縣市</i>
-                </li>
-                <li class="all is-active">全區<i></i></li>
-              </ul>
-              <ul class="col">
-                <li data-idx="0">中正區<i></i></li>
-                <li data-idx="1">大同區<i></i></li>
-                <li data-idx="2">中山區<i></i></li>
-                <li data-idx="3">松山區<i></i></li>
-                <li data-idx="4">大安區<i></i></li>
-                <li data-idx="5">萬華區<i></i></li>
-                <li data-idx="6">信義區<i></i></li>
-                <li data-idx="7">士林區<i></i></li>
-                <li data-idx="8">北投區<i></i></li>
-                <li data-idx="9">內湖區<i></i></li>
-                <li data-idx="10">南港區<i></i></li>
-                <li data-idx="11">文山區<i></i></li>
-              </ul>
-            </div>
-          </div>
-          <div class="m-select" data-name="price">
-            <p><span class="tit">價格</span><span class="cont">不限</span></p>
-            <div class="item">
-              <div class="range">
-                <input data-idx="0" type="tel" placeholder="不限" value="" />
-                -
-                <input data-idx="1" type="tel" placeholder="不限" value="" />
-                萬
-              </div>
-            </div>
-          </div>
-          <div class="m-select" data-name="houseType">
-            <p>
-              <span class="tit">房屋型態</span><span class="cont">不限</span>
-            </p>
-            <div class="item">
-              <ul>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_none"
-                  class="all ga_click_trace is-active"
-                >
-                  不限<i></i>
-                </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_building"
-                  class="ga_click_trace"
-                  data-idx="0"
-                >
-                  電梯大廈<i></i>
-                </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_apart"
-                  class="ga_click_trace"
-                  data-idx="1"
-                >
-                  無電梯公寓<i></i>
-                </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_villa"
-                  class="ga_click_trace"
-                  data-idx="2"
-                >
-                  別墅<i></i>
-                </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_townhouse"
-                  class="ga_click_trace"
-                  data-idx="3"
-                >
-                  透天<i></i>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="m-select" data-name="houseRoom">
-            <p><span class="tit">房數</span><span class="cont">不限</span></p>
-            <div class="item">
-              <div class="range">
-                <input data-idx="0" type="tel" placeholder="不限" value="" />
-                -
-                <input data-idx="1" type="tel" placeholder="不限" value="" />
-                房
-                <div class="checkbox">
-                  <input
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_room_click"
-                    ga_label="buy_search_m_room_plus"
-                    class="ga_click_trace"
-                    data-val="p"
-                    id="checkhouseRoom0"
-                    type="checkbox"
-                  /><label for="checkhouseRoom0">含加蓋</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="m-select" data-name="ping">
-            <p>
-              <span class="tit">坪數</span><span class="cont">建物 不限</span>
-            </p>
-            <div class="item">
-              <ul></ul>
-              <ul class="col">
-                <li data-idx="0" class="is-active">建物<i></i></li>
-                <li data-idx="1">主+陽<i></i></li>
-                <li data-idx="2">土地<i></i></li>
-              </ul>
-              <div class="range">
-                <input
-                  data-idx="0"
-                  type="tel"
-                  placeholder="不限"
-                  value=""
-                />-<input
-                  data-idx="1"
-                  type="tel"
-                  placeholder="不限"
-                  value=""
-                />坪
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="search" data-name="keyword">
-          <input
-            type="search"
-            placeholder="請輸入搜尋關鍵字、編號、街道或大樓"
-            value=""
-          />
-        </div>
-        <div class="b-fold-block actfold off">
-          <div class="m-fold-block">
-            <div class="m-type" data-name="purpose">
-              <p><span class="tit">用途</span><span class="cont">不限</span></p>
-              <div class="item is-active">
-                <ul>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_all"
-                    class="all ga_click_trace is-active"
-                  >
-                    不限<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_house"
-                    class="ga_click_trace"
-                    data-idx="0"
-                  >
-                    住宅<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_store"
-                    class="ga_click_trace"
-                    data-idx="1"
-                  >
-                    店面<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_office"
-                    class="ga_click_trace"
-                    data-idx="2"
-                  >
-                    辦公<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_factory"
-                    class="ga_click_trace"
-                    data-idx="3"
-                  >
-                    廠房<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_park"
-                    class="ga_click_trace"
-                    data-idx="4"
-                  >
-                    車位<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_land"
-                    class="ga_click_trace"
-                    data-idx="5"
-                  >
-                    土地<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_use_click"
-                    ga_label="buy_search_m_use_other"
-                    class="ga_click_trace"
-                    data-idx="6"
-                  >
-                    其他<i></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="m-type" data-name="houseYear">
-              <p><span class="tit">屋齡</span><span class="cont">不限</span></p>
-              <div class="item">
-                <div class="range">
-                  <input data-idx="0" type="tel" placeholder="不限" value="" />
-                  -
-                  <input data-idx="1" type="tel" placeholder="不限" value="" />
-                  年
-                  <div class="checkbox">
-                    <input
-                      ga_cat="buy_search_m"
-                      ga_event="buy_search_m_age_click"
-                      ga_label="buy_search_m_age_0"
-                      class="ga_click_trace"
-                      data-val="0"
-                      id="checkhouseYear0"
-                      type="checkbox"
-                    /><label for="checkhouseYear0">預售屋</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="m-type" data-name="houseFloor">
-              <p><span class="tit">樓層</span><span class="cont">不限</span></p>
-              <div class="item">
-                <div class="range">
-                  <input data-idx="0" type="tel" placeholder="不限" value="" />
-                  -
-                  <input data-idx="1" type="tel" placeholder="不限" value="" />
-                  樓
-                  <div class="checkbox">
-                    <input
-                      ga_cat="buy_search_m"
-                      ga_event="buy_search_m_floor_click"
-                      ga_label="buy_search_m_floor_under1"
-                      class="ga_click_trace"
-                      data-val="0"
-                      id="checkhouseFloor0"
-                      type="checkbox"
-                    /><label for="checkhouseFloor0">低於一樓</label>
-                  </div>
-                  <div class="checkbox">
-                    <input
-                      ga_cat="buy_search_m"
-                      ga_event="buy_search_m_floor_click"
-                      ga_label="buy_search_m_floor_top"
-                      class="ga_click_trace"
-                      data-val="p"
-                      id="checkhouseFloor1"
-                      type="checkbox"
-                    /><label for="checkhouseFloor1">限頂樓</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="m-type" data-name="parkingType">
-              <p>
-                <span class="tit">車位</span><span class="cont">種類不限</span>
-              </p>
-              <div class="item">
-                <ul>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_yes"
-                    class="all ga_click_trace is-active"
-                  >
-                    種類不限<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_rampA"
-                    class="ga_click_trace"
-                    data-idx="0"
-                  >
-                    坡道平面<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_rampB"
-                    class="ga_click_trace"
-                    data-idx="1"
-                  >
-                    坡道機械<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_liftA"
-                    class="ga_click_trace"
-                    data-idx="2"
-                  >
-                    昇降平面<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_liftB"
-                    class="ga_click_trace"
-                    data-idx="3"
-                  >
-                    昇降機械<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_park_click"
-                    ga_label="buy_search_m_park_yard"
-                    class="ga_click_trace"
-                    data-idx="4"
-                  >
-                    庭院<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="[object Object]"
-                    ga_label="[object Object]"
-                    class="none ga_click_trace"
-                  >
-                    無<i></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="m-type" data-name="position">
-              <p><span class="tit">朝向</span><span class="cont">不限</span></p>
-              <div class="item">
-                <ul>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_不限"
-                    class="all ga_click_trace is-active"
-                  >
-                    不限<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_東"
-                    class="ga_click_trace"
-                    data-idx="0"
-                  >
-                    東<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_南"
-                    class="ga_click_trace"
-                    data-idx="1"
-                  >
-                    南<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_西"
-                    class="ga_click_trace"
-                    data-idx="2"
-                  >
-                    西<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_北"
-                    class="ga_click_trace"
-                    data-idx="3"
-                  >
-                    北<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_東北"
-                    class="ga_click_trace"
-                    data-idx="4"
-                  >
-                    東北<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_東南"
-                    class="ga_click_trace"
-                    data-idx="5"
-                  >
-                    東南<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_西北"
-                    class="ga_click_trace"
-                    data-idx="6"
-                  >
-                    西北<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_toward_click"
-                    ga_label="buy_search_m_toward_西南"
-                    class="ga_click_trace"
-                    data-idx="7"
-                  >
-                    西南<i></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="m-type" data-name="around">
-              <p>
-                <span class="tit">周遭環境</span><span class="cont">不限</span>
-              </p>
-              <div class="item">
-                <ul>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_不限"
-                    class="all ga_click_trace is-active"
-                  >
-                    不限<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_低公設"
-                    class="ga_click_trace"
-                    data-idx="0"
-                  >
-                    低公設<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近公園"
-                    class="ga_click_trace"
-                    data-idx="1"
-                  >
-                    近公園<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近捷運"
-                    class="ga_click_trace"
-                    data-idx="2"
-                  >
-                    近捷運<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近自行車站"
-                    class="ga_click_trace"
-                    data-idx="3"
-                  >
-                    近自行車站<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近市場"
-                    class="ga_click_trace"
-                    data-idx="4"
-                  >
-                    近市場<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近學校"
-                    class="ga_click_trace"
-                    data-idx="5"
-                  >
-                    近學校<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_近醫療機構"
-                    class="ga_click_trace"
-                    data-idx="6"
-                  >
-                    近醫療機構<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_search_m_sp_click"
-                    ga_label="buy_search_m_sp_無障礙空間"
-                    class="ga_click_trace"
-                    data-idx="7"
-                  >
-                    無障礙空間<i></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="m-type" data-name="featured">
-              <p>
-                <span class="tit">特色房屋</span><span class="cont">不限</span>
-              </p>
-              <div class="item">
-                <ul>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_filter_m_tag_click"
-                    ga_label="buy_filter_m_tag_不限"
-                    class="all ga_click_trace is-active"
-                  >
-                    不限<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_filter_m_tag_click"
-                    ga_label="buy_filter_m_tag_vr"
-                    class="ga_click_trace"
-                    data-idx="0"
-                  >
-                    實境找房<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_filter_m_tag_click"
-                    ga_label="buy_filter_m_tag_new"
-                    class="ga_click_trace"
-                    data-idx="1"
-                  >
-                    新上架<i></i>
-                  </li>
-                  <li
-                    ga_cat="buy_search_m"
-                    ga_event="buy_filter_m_tag_click"
-                    ga_label="buy_filter_m_tag_reduction"
-                    class="ga_click_trace"
-                    data-idx="2"
-                  >
-                    降價<i></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="b-fold-txt">+更多條件</a>
-        </div>
-        <div class="m-submit">
-          <a
-            href="javascript:;"
-            ga_cat="buy_search_m"
-            ga_event="buy_search_m_click"
-            ga_label="buy_search_m_btn"
-            class="button ga_click_trace"
-            >開始搜尋</a
-          >
-        </div>
-      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

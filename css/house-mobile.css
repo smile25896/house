@@ -290,6 +290,10 @@
   color: #888;
 }
 
+.b-fold-block.actfold.off .m-fold-block {
+  display: none;
+}
+
 .b-fold-block.actfold.on .m-fold-block {
   display: block;
 }
@@ -324,6 +328,9 @@
   margin-bottom: 0;
   height: 46.25px;
   line-height: 47.5px;
+}
+.m-type p.is-active > span.cont {
+  width: 0;
 }
 
 .m-type p > span.cont {
@@ -382,9 +389,10 @@
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  width: calc(100% - 2.5rem);
+  width: 100%;
   padding: 0 1.25rem 0.8333333333rem 1.25rem;
   background: #fff;
+  z-index: 999;
 }
 .m-search-bar.is-hide {
   display: none;
@@ -441,6 +449,9 @@
 
 .m-list-buy {
   padding-top: 4rem;
+}
+.m-list-buy.is-hide {
+  display: none;
 }
 
 .m-list-buy .m-house {
