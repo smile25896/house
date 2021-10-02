@@ -688,24 +688,15 @@
           </p>
           <div class="item">
             <ul>
-              <li data-idx="0" data-sarch-mode="region">區域找<i></i></li>
-              <li
-                ga_cat="buy_search_m"
-                ga_event="buy_search_m_how_click"
-                ga_label="buy_search_m_how_mrt"
-                class="ga_click_trace"
-                data-idx="1"
-                data-sarch-mode="num"
-              >
-                物件編號找<i></i>
-              </li>
+              <li class="is-active" data-search-mode="region">區域找<i></i></li>
+              <li data-search-mode="num">物件編號找<i></i></li>
             </ul>
           </div>
         </div>
         <div class="b-select-block">
           <div class="m-select" data-name="district" style="display: none">
-            <p><span class="tit">台北市</span></p>
-            <div class="item">
+            <p><span class="tit">台北市全區</span></p>
+            <div class="item is-active">
               <ul class="col">
                 <li data-idx="0" class="is-active">台北市<i></i></li>
                 <li data-idx="1">新北市<i></i></li>
@@ -739,7 +730,8 @@
             <div class="item">
               <ul>
                 <li class="city is-active">
-                  台北市<i class="close">切換縣市</i>
+                  <span class="city-name">台北市</span
+                  ><i class="close">切換縣市</i>
                 </li>
                 <li class="all is-active">全區<i></i></li>
               </ul>
@@ -763,9 +755,21 @@
             <p><span class="tit">價格</span><span class="cont">不限</span></p>
             <div class="item">
               <div class="range">
-                <input data-idx="0" type="tel" placeholder="不限" value="" />
+                <input
+                  data-idx="0"
+                  data-type="price"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />
                 -
-                <input data-idx="1" type="tel" placeholder="不限" value="" />
+                <input
+                  data-idx="1"
+                  data-type="price"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />
                 萬
               </div>
             </div>
@@ -776,49 +780,20 @@
             </p>
             <div class="item">
               <ul>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_none"
-                  class="all ga_click_trace is-active"
-                >
-                  不限<i></i>
+                <li class="all ga_click_trace is-active">
+                  <span class="type-name">不限</span><i></i>
                 </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_building"
-                  class="ga_click_trace"
-                  data-idx="0"
-                >
-                  電梯大廈<i></i>
+                <li class="ga_click_trace" data-idx="0">
+                  <span class="type-name">電梯大廈</span><i></i>
                 </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_apart"
-                  class="ga_click_trace"
-                  data-idx="1"
-                >
-                  無電梯公寓<i></i>
+                <li class="ga_click_trace" data-idx="1">
+                  <span class="type-name">無電梯公寓</span><i></i>
                 </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_villa"
-                  class="ga_click_trace"
-                  data-idx="2"
-                >
-                  別墅<i></i>
+                <li class="ga_click_trace" data-idx="2">
+                  <span class="type-name">別墅</span><i></i>
                 </li>
-                <li
-                  ga_cat="buy_search_m"
-                  ga_event="buy_search_m_type_click"
-                  ga_label="buy_search_m_townhouse"
-                  class="ga_click_trace"
-                  data-idx="3"
-                >
-                  透天<i></i>
+                <li class="ga_click_trace" data-idx="3">
+                  <span class="type-name">透天</span><i></i>
                 </li>
               </ul>
             </div>
@@ -827,9 +802,21 @@
             <p><span class="tit">房數</span><span class="cont">不限</span></p>
             <div class="item">
               <div class="range">
-                <input data-idx="0" type="tel" placeholder="不限" value="" />
+                <input
+                  data-idx="0"
+                  data-type="houseRoom"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />
                 -
-                <input data-idx="1" type="tel" placeholder="不限" value="" />
+                <input
+                  data-idx="1"
+                  data-type="houseRoom"
+                  type="tel"
+                  placeholder="不限"
+                  value=""
+                />
                 房
                 <div class="checkbox">
                   <input
@@ -860,11 +847,13 @@
                 <input
                   data-idx="0"
                   type="tel"
+                  data-type="ping"
                   placeholder="不限"
                   value=""
                 />-<input
                   data-idx="1"
                   type="tel"
+                  data-type="ping"
                   placeholder="不限"
                   value=""
                 />坪
@@ -883,7 +872,7 @@
           <div class="m-fold-block">
             <div class="m-type" data-name="purpose">
               <p><span class="tit">用途</span><span class="cont">不限</span></p>
-              <div class="item is-active">
+              <div class="item">
                 <ul>
                   <li
                     ga_cat="buy_search_m"
@@ -963,9 +952,21 @@
               <p><span class="tit">屋齡</span><span class="cont">不限</span></p>
               <div class="item">
                 <div class="range">
-                  <input data-idx="0" type="tel" placeholder="不限" value="" />
+                  <input
+                    data-idx="0"
+                    data-type="houseYear"
+                    type="tel"
+                    placeholder="不限"
+                    value=""
+                  />
                   -
-                  <input data-idx="1" type="tel" placeholder="不限" value="" />
+                  <input
+                    data-idx="1"
+                    data-type="houseYear"
+                    type="tel"
+                    placeholder="不限"
+                    value=""
+                  />
                   年
                   <div class="checkbox">
                     <input
@@ -985,16 +986,24 @@
               <p><span class="tit">樓層</span><span class="cont">不限</span></p>
               <div class="item">
                 <div class="range">
-                  <input data-idx="0" type="tel" placeholder="不限" value="" />
+                  <input
+                    data-idx="0"
+                    type="tel"
+                    data-type="houseFloor"
+                    placeholder="不限"
+                    value=""
+                  />
                   -
-                  <input data-idx="1" type="tel" placeholder="不限" value="" />
+                  <input
+                    data-idx="1"
+                    type="tel"
+                    data-type="houseFloor"
+                    placeholder="不限"
+                    value=""
+                  />
                   樓
                   <div class="checkbox">
                     <input
-                      ga_cat="buy_search_m"
-                      ga_event="buy_search_m_floor_click"
-                      ga_label="buy_search_m_floor_under1"
-                      class="ga_click_trace"
                       data-val="0"
                       id="checkhouseFloor0"
                       type="checkbox"
@@ -1773,5 +1782,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/house-mobile.js"></script>
+    <script src="./js/house-mobile-data.js"></script>
   </body>
 </html>

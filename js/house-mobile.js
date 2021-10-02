@@ -66,12 +66,12 @@ function setSelectsEvent() {
 }
 
 function getSelects() {
-  let selects = document.querySelectorAll(".m-select");
+  let selects = document.querySelectorAll(".m-select p");
   return Array.apply(null, selects);
 }
 
 function getSelects2() {
-  let selects = document.querySelectorAll(".m-type");
+  let selects = document.querySelectorAll(".m-type p");
   return Array.apply(null, selects);
 }
 
@@ -81,7 +81,6 @@ function handleClickSelect(e) {
     target = target.parentNode;
   }
   let status = target.classList.contains("is-active");
-  target = target.parentNode;
 
   let selects = getSelects();
   selects.forEach((item) => {
@@ -99,10 +98,9 @@ function handleClickSelect2(e) {
     target = target.parentNode;
   }
   let status = target.classList.contains("is-active");
-  target = target.parentNode;
 
-  let selects2 = getSelects2();
-  selects2.forEach((item) => {
+  let selects = getSelects2();
+  selects.forEach((item) => {
     toggleSelect(item, false);
   });
 
@@ -113,10 +111,10 @@ function handleClickSelect2(e) {
 
 function toggleSelect(selectNodem, status) {
   if (status) {
-    selectNodem.querySelector("p").classList.add("is-active");
-    selectNodem.querySelector(".item").classList.add("is-active");
+    selectNodem.classList.add("is-active");
+    selectNodem.parentNode.querySelector(".item").classList.add("is-active");
   } else {
-    selectNodem.querySelector("p").classList.remove("is-active");
-    selectNodem.querySelector(".item").classList.remove("is-active");
+    selectNodem.classList.remove("is-active");
+    selectNodem.parentNode.querySelector(".item").classList.remove("is-active");
   }
 }
