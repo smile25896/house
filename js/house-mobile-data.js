@@ -34,6 +34,7 @@ $(document).ready(function () {
   setRangeEvent();
   setPyeongTypeEvent();
   setMoreOptionEvent();
+  setHouseFloor0Event();
 });
 
 function getSearchTypeOption() {
@@ -252,7 +253,6 @@ function setHouseTypeText() {
   if (selected.length > 0) {
     text = selected.map((item) => item.textContent).join(",");
   }
-  console.log(text);
   document.querySelector("[data-name='houseType'] .cont").textContent = text;
 }
 
@@ -267,6 +267,10 @@ function setRangeEvent() {
 
 function handleChangeRangeInput(e) {
   setRangeText(e.target.dataset.type);
+
+  if (e.target.dataset.type === "houseFloor" && e.target.dataset.idx) {
+    document.querySelector("#checkhouseFloor0").checked = false;
+  }
 }
 
 function setRangeText(type) {
@@ -298,6 +302,21 @@ function setRangeText(type) {
     text += "不限";
   }
   document.querySelector(`[data-name='${type}'] .cont`).textContent = text;
+}
+
+function setHouseFloor0Event() {
+  document
+    .querySelector("#checkhouseFloor0")
+    .addEventListener("click", handleChangeHouseFloor0);
+}
+
+function handleChangeHouseFloor0(e) {
+  if (e.target.checked) {
+    let inputs = querySelectorAllArray(
+      "[data-name='houseFloor'] input[type='tel']"
+    );
+    inputs[0].value = "";
+  }
 }
 
 function setPyeongTypeEvent() {
@@ -357,6 +376,11 @@ function handleMoreOption(e) {
         .classList.add("is-active");
     }
   }
+
+  document.querySelector(`[data-name='${type}'] .cont`).textContent =
+    querySelectorAllArray(`[data-name='${type}'] .item ul li.is-active`)
+      .map((item) => item.textContent.replace(/[\n\r]+|[\s]{2,}/g, "").trim())
+      .join(",");
 }
 
 function querySelectorAllArray(string) {
