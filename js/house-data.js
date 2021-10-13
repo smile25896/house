@@ -1,11 +1,13 @@
 $(document).ready(function () {
   setSearchButtonDom();
   postToSearchHouseData();
+  getHouseCategory();
   setPagination();
 });
 
 let totalPage = 0;
 let currentPage = 1;
+let categories = [];
 
 function setSearchButtonDom() {
   document
@@ -251,4 +253,25 @@ function clickPage(e) {
 
   setPagination();
   postToSearchHouseData();
+}
+
+function getHouseCategory() {
+  fetch("http://localhost:5500/tmpData/catagory.json", {
+    method: "GET",
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      categories = myJson;
+      setCategoryDom();
+    });
+}
+
+function setCategoryDom() {
+  let domStr = `<li class="tab is-active" data-tab="all">全部用途</li>`;
+  categories.forEach((item) => {
+    domStr += `<li class="tab" data-tab="${item.id}">${item.name}</li>`;
+  });
+  document.querySelector(".m-search-for-lists").innerHTML = domStr;
 }
