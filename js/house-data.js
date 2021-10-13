@@ -256,7 +256,7 @@ function clickPage(e) {
 }
 
 function getHouseCategory() {
-  fetch("http://localhost:5500/tmpData/catagory.json", {
+  fetch("http://168.odin-eye.com/product/category_name", {
     method: "GET",
   })
     .then(function (response) {
