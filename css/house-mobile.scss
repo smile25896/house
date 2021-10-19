@@ -410,7 +410,7 @@
   transform: translateX(0);
   // width: calc(100% - 2.5rem);
   width: 100%;
-  padding: 0 1.25rem 0.8333333333rem 1.25rem;
+  padding: 0.8333333333rem 1.25rem 0.8333333333rem 1.25rem;
   background: #fff;
   z-index: 999;
 
@@ -471,7 +471,6 @@
 // 房屋
 
 .m-list-buy {
-  padding-top: 4rem;
   &.is-hide {
     display: none;
   }

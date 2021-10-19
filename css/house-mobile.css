@@ -391,7 +391,7 @@
   -webkit-transform: translateX(0);
   transform: translateX(0);
   width: 100%;
-  padding: 0 1.25rem 0.8333333333rem 1.25rem;
+  padding: 0.8333333333rem 1.25rem 0.8333333333rem 1.25rem;
   background: #fff;
   z-index: 999;
 }
@@ -448,9 +448,6 @@
   display: inline-block;
 }
 
-.m-list-buy {
-  padding-top: 4rem;
-}
 .m-list-buy.is-hide {
   display: none;
 }
