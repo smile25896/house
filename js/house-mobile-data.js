@@ -35,6 +35,7 @@ $(document).ready(function () {
   setPyeongTypeEvent();
   setMoreOptionEvent();
   setHouseFloor0Event();
+  setPagination();
 });
 
 function getSearchTypeOption() {

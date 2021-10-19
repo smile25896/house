@@ -1,6 +1,6 @@
 $(document).ready(function () {
   postToSearchHouseData();
-  loadMoreData();
+  // loadMoreData();
   document
     .querySelector("#search-button")
     .addEventListener("click", postToSearchHouseData);
@@ -10,9 +10,8 @@ let totalPage = 0;
 let globalPage = 1;
 let isLoadingMore = false;
 
-function postToSearchHouseData(page = 1) {
-  globalPage = page;
-  fetch("http://localhost:5500/tmpData/data.json", {
+function postToSearchHouseData() {
+  fetch("http://localhost:5500/tmpData/data.json?page=" + globalPage, {
     // body: { page, ...JSON.stringify(getApiParams()) },
     // method: "POST",
   })
@@ -20,10 +19,10 @@ function postToSearchHouseData(page = 1) {
       return response.json();
     })
     .then(function (myJson) {
-      setHouseDom(myJson.data, page);
+      setHouseDom(myJson.data);
       totalPage = myJson.totalPage;
       isLoadingMore = false;
-      // setPagination();
+      setPagination();
     });
 }
 
@@ -125,14 +124,9 @@ function getMoreOptionValue(str, removeSpace) {
   return "";
 }
 
-function setHouseDom(data, page = 1) {
+function setHouseDom(data) {
   let ulDom = document.querySelector(".m-list-buy ul");
-  let domStr;
-  if (page === 1) {
-    domStr = "";
-  } else {
-    domStr = document.querySelector(".m-list-buy ul").innerHTML;
-  }
+  let domStr = "";
 
   data.forEach((item) => {
     let roomStr = `${
@@ -176,42 +170,113 @@ function setHouseDom(data, page = 1) {
   ulDom.innerHTML = domStr;
 }
 
-function loadMoreData() {
-  // we will add this content, replace for anything you want to add
-  var more = '<div style="height: 1000px; background: #EEE;"></div>';
-
-  var wrapper = document;
-  var content = document.querySelector(".m-list-buy ul");
-  // var test = document.getElementById("test");
-  content.innerHTML = more;
-
-  // cross browser addEvent, today you can safely use just addEventListener
-  function addEvent(obj, ev, fn) {
-    if (obj.addEventListener) obj.addEventListener(ev, fn, false);
-    else if (obj.attachEvent) obj.attachEvent("on" + ev, fn);
-  }
-
-  // this is the scroll event handler
-  function scroller() {
-    // print relevant scroll info
-    // test.innerHTML =
-    //   wrapper.scrollTop +
-    //   "+" +
-    //   wrapper.offsetHeight +
-    //   "+100>" +
-    //   content.offsetHeight;
-
-    // add more contents if user scrolled down enough
-    if (
-      wrapper.querySelector("html").scrollTop + 1000 > content.offsetHeight &&
-      !isLoadingMore &&
-      totalPage >= globalPage + 1
-    ) {
-      postToSearchHouseData(globalPage + 1);
-      isLoadingMore = true;
+function setPagination() {
+  let disablePrev = globalPage === 1 ? "disabled" : "";
+  let domString = `
+<li class="pagination-prev ${disablePrev}">
+  <span data-page="${globalPage - 1}">&lt;</span>
+</li>`;
+  if (globalPage <= 3) {
+    for (let i = 1; i <= totalPage && i <= 5; i++) {
+      let active = "";
+      if (i === globalPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
+    }
+  } else if (globalPage + 2 <= totalPage) {
+    for (let i = globalPage - 2; i <= globalPage + 2; i++) {
+      let active = "";
+      if (i === globalPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
+    }
+  } else {
+    let prevCount = 4 - (totalPage - globalPage);
+    for (let i = globalPage - prevCount; i <= totalPage; i++) {
+      let active = "";
+      if (i === globalPage) {
+        active = "active";
+      }
+      domString += `<li class="pagination-page ${active}">
+      <span data-page="${i}">${i}</span>
+    </li>`;
     }
   }
+  let disableNext = globalPage === totalPage ? "disabled" : "";
 
-  // hook the scroll handler to scroll event
-  addEvent(wrapper, "scroll", scroller);
+  domString += `
+<li class="pagination-next ${disableNext}">
+  <span data-page="${globalPage + 1}">&gt;</span>
+</li>`;
+
+  document.querySelector("ul.pagination").innerHTML = domString;
+
+  let pageDoms = getPageButtonDom();
+  pageDoms.forEach((item) => {
+    item.addEventListener("click", clickPage);
+  });
 }
+
+function getPageButtonDom() {
+  let pageDoms = document.querySelectorAll("ul.pagination li");
+  return Array.apply(null, pageDoms);
+}
+
+function clickPage(e) {
+  let page = Number(e.target.dataset.page);
+  if (page < 1 || page > totalPage) {
+    return;
+  }
+  globalPage = Number(e.target.dataset.page);
+
+  console.log(globalPage);
+
+  setPagination();
+  postToSearchHouseData();
+}
+
+// function loadMoreData() {
+//   // we will add this content, replace for anything you want to add
+//   var more = '<div style="height: 1000px; background: #EEE;"></div>';
+
+//   var wrapper = document;
+//   var content = document.querySelector(".m-list-buy ul");
+//   // var test = document.getElementById("test");
+//   content.innerHTML = more;
+
+//   // cross browser addEvent, today you can safely use just addEventListener
+//   function addEvent(obj, ev, fn) {
+//     if (obj.addEventListener) obj.addEventListener(ev, fn, false);
+//     else if (obj.attachEvent) obj.attachEvent("on" + ev, fn);
+//   }
+
+//   // this is the scroll event handler
+//   function scroller() {
+//     // print relevant scroll info
+//     // test.innerHTML =
+//     //   wrapper.scrollTop +
+//     //   "+" +
+//     //   wrapper.offsetHeight +
+//     //   "+100>" +
+//     //   content.offsetHeight;
+
+//     // add more contents if user scrolled down enough
+//     if (
+//       wrapper.querySelector("html").scrollTop + 1000 > content.offsetHeight &&
+//       !isLoadingMore &&
+//       totalPage >= globalPage + 1
+//     ) {
+//       postToSearchHouseData(globalPage + 1);
+//       isLoadingMore = true;
+//     }
+//   }
+
+//   // hook the scroll handler to scroll event
+//   addEvent(wrapper, "scroll", scroller);
+// }
