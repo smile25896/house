@@ -59,7 +59,7 @@ function postToSearchHouseData() {
     document.querySelector("input[name='pyeongType-type']:checked")?.cheked ??
     "";
 
-  let Car = document.querySelector("input[name='car']:checked")?.cheked ?? "";
+  let Car = document.querySelector("input[name='car']:checked")?.value ?? "";
 
   let Keywords =
     document.querySelector("input[name='search-text-keywords']")?.value ?? "";
