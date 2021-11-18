@@ -274,4 +274,5 @@ function setCategoryDom() {
     domStr += `<li class="tab" data-tab="${item.id}">${item.name}</li>`;
   });
   document.querySelector(".m-search-for-lists").innerHTML = domStr;
+  setTabEvent();
 }

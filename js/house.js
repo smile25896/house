@@ -1,12 +1,7 @@
 $(document).ready(function () {
   setHouseTypeEvent();
   setCarEvent();
-
-  let tabList = document.querySelectorAll(".m-search-for-lists li");
-  tabList = Array.apply(null, tabList);
-  tabList.forEach((item) => {
-    item.addEventListener("click", handleClickTab);
-  });
+  setTabEvent();
 
   $(".dropdown-box a").on("click", function (event) {
     let isShow = event.target.parentNode.classList.contains("show1");
@@ -32,6 +27,14 @@ $("body").on("click", function (e) {
     $(".dropdown-box").removeClass("show1");
   }
 });
+
+function setTabEvent() {
+  let tabList = document.querySelectorAll(".m-search-for-lists li");
+  tabList = Array.apply(null, tabList);
+  tabList.forEach((item) => {
+    item.addEventListener("click", handleClickTab);
+  });
+}
 
 function handleClickTab(e) {
   let tabList = document.querySelectorAll(".m-search-for-lists li");
