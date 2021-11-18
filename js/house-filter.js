@@ -20,7 +20,6 @@ function setClickFilterEvent() {
 function handleClickChangeFilter(e) {
   let target = e.target.parentElement;
   listFilter = target.dataset.filter;
-  console.log(listFilter);
   postToSearchHouseData();
 
   let filters = getFilter();

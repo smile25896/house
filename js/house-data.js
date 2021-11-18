@@ -56,7 +56,7 @@ function postToSearchHouseData() {
   let Rooms = getRangeData(roomList, "array");
 
   let PyeongType =
-    document.querySelector("input[name='pyeongType-type']:checked")?.cheked ??
+    document.querySelector("input[name='pyeongType-type']:checked")?.value ??
     "";
 
   let Car = document.querySelector("input[name='car']:checked")?.value ?? "";
