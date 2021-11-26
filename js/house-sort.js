@@ -18,7 +18,11 @@ function setClickSortOptionEvent() {
 }
 
 function handleClickChangeSortOption(e) {
-  listSort = e.target.dataset.od;
+  let target = e.target;
+  while (target.tagName !== "A") {
+    target = target.parentNode;
+  }
+  listSort = target.dataset.od;
   postToSearchHouseData();
 
   document.querySelector(".list-sort-handler.m-select-box").textContent =

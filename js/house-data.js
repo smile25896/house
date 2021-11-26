@@ -120,6 +120,7 @@ function setHouseDom(data) {
   let domStr = "";
 
   data.forEach((item) => {
+    let CaseDes = item.CaseDes.replace(/(<br>)*/g, "");
     domStr += `<li class="m-list-item">
               <a
                 href="javascript:void(0)"
@@ -141,7 +142,7 @@ function setHouseDom(data) {
                   <h3>${item.CaseName}　${item.Address}</h3>
                 </a>
                 <div class="item-description">
-                  ${item.CaseDes}
+                  ${CaseDes}
                 </div>
                 <ul class="item-info-detail">
                   <li>${item.CaseTypeName}</li>
@@ -154,7 +155,7 @@ function setHouseDom(data) {
                   <li>
                     <span>主</span>
                     ${item.PorchArea > 0 ? "<span>+ 陽</span>" : ""}
-                    ${item.MainArea + item.PorchArea} 坪
+                    ${(item.MainArea + item.PorchArea).toFixed(2)} 坪
                   </li>
                 </ul>
                 <div class="item-tags">
